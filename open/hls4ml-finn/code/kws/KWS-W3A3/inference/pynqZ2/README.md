@@ -1,12 +1,8 @@
-# The KWS examplee
-
-The KWS example includes an MLP for the Google SpeechCommandsV2 dataset.
-
 ## Build stitched-IP for MLPerf tiny and bitfile for PYNQ
 
 The build is currently configured for the PYNQ-Z2 board and a throughput of about 200k FPS at a clock frequency of 100 MHz.
 
-1. Copy the trained `QONNX_model.onnx` model from the training folder. Relative to this folder the pre-trained model is located here: `../../training/training_checkpoint/QONNX_model.onnx`
+1. Copy the trained `QONNX_model.onnx` model from the training folder. The command is: `cp ../../training/training_checkpoint/QONNX_model.onnx .`
 2. (Optional) Download the pre-processed validation data using the `get-kws-data.sh` script.
 3. Launch the build as follows:
 ```shell
