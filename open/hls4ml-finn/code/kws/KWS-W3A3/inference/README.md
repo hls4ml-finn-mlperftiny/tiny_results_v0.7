@@ -9,9 +9,7 @@ to do this again in the future when the `finn-examples` repo gets updated and re
 2. Ensure you have the [requirements](https://finn.readthedocs.io/en/latest/getting_started.html#requirements) for FINN installed, which includes
 Docker community edition `docker-ce`.
 
-3. Set up the environment variables to point to your Vivado/Vitis installation, depending on your target platform(s):
-    *  For Zynq platforms you'll need to set `VIVADO_PATH`, e.g. `VIVADO_PATH=/opt/xilinx/Vivado/2019.1/`
-    * For Alveo platforms you'll need to set `VITIS_PATH`, `PLATFORM_REPO_PATHS` and `XILINX_XRT`
+3. Set up ``FINN_XILINX_PATH`` and ``FINN_XILINX_VERSION`` environment variables pointing respectively to the Xilinx tools installation directory and version (e.g. ``FINN_XILINX_PATH=/opt/Xilinx`` and ``FINN_XILINX_VERSION=2020.1``)
 
 ## Build bitfiles
 
