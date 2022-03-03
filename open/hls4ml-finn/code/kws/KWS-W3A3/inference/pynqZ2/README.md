@@ -6,14 +6,14 @@ The KWS example includes an MLP for the Google SpeechCommandsV2 dataset.
 
 The build is currently configured for the PYNQ-Z2 board and a throughput of about 200k FPS at a clock frequency of 100 MHz.
 
-1. Copy the trained `QONNX_model.onnx` model from the training folder.
-2. Download the pre-processed validation data using the `get-kws-data.sh` script.
+1. Copy the trained `QONNX_model.onnx` model from the training folder. Relative to this folder the pre-trained model is located here: `../../training/training_checkpoint/QONNX_model.onnx`
+2. (Optional) Download the pre-processed validation data using the `get-kws-data.sh` script.
 3. Launch the build as follows:
 ```shell
 # cd to where the FINN compiler was cloned to
 cd ../finn
 # launch the build on the build foler
-bash run-docker.sh build_custom ../kws-pynqz-hslmover
+bash run-docker.sh build_custom ../pynqZ2
 ```
 
 4. The generated outputs will be under `kws-pynqz-hslmover/<timestamp>_output_<onnx_file_name>_<platform>`. 
