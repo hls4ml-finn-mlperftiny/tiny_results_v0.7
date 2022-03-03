@@ -54,8 +54,6 @@ def main(args):
     BOARD_NAME = convert_config['board_name']
     FPGA_PART = convert_config['fpga_part']
     TB_DATA_DIR = convert_config['tb_data_dir']
-    X_VAL_DATA_DIR = convert_config['x_npy_val_dir']
-    Y_VAL_DATA_DIR = convert_config['y_npy_val_dir']
     X_TEST_DATA_DIR = convert_config['x_npy_dir']
     Y_TEST_DATA_DIR = convert_config['y_npy_dir']
     OUTPUT_DIR = convert_config['output_dir'] + f'_{BOARD_NAME}'

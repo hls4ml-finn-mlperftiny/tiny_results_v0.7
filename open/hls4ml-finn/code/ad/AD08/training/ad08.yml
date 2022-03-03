@@ -49,8 +49,6 @@ train:
   result_file: result.csv
 convert:
   tb_data_dir: ../convert/processed_data/64input_test_bench_data.npy
-  x_npy_val_dir: ../convert/processed_data/64input_validation_data.npy
-  y_npy_val_dir: ../convert/processed_data/64input_validation_data_ground_truths.npy
   x_npy_dir: ../convert/processed_data/64input_test_data.npy
   y_npy_dir: ../convert/processed_data/64input_test_data_ground_truths.npy
   
