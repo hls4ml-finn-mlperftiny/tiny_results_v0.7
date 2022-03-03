@@ -16,7 +16,7 @@ Even though this model is equivalent to the one from the FINN publication,
 the training of this model is now one of the examples of the quantization
 aware training library [Brevitas](https://github.com/Xilinx/brevitas).
 
-To reproduce the training the following steps can be taken:
+To reproduce the training the following steps should be taken:
 1. Install [PyTorch](https://pytorch.org/get-started/locally/)
 2. Install Brevitas, by following the install instructions here: https://github.com/Xilinx/brevitas#installation
 3. The training can now be run as the bnn-pynq example of Brevitas
