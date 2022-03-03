@@ -7,7 +7,6 @@ onnx_models/
 profiling_data/
 plots/
 notebooks/pre_processed_data/
-kws_bin_files/
 tmp.onnx
 experiment_number.txt
 kws_bin_files.zip
