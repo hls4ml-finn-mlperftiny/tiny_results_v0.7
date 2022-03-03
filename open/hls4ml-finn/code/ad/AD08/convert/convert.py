@@ -144,7 +144,7 @@ def main(args):
         if BACKEND == 'VivadoAccelerator':
             output_keras = model.predict(np.ascontiguousarray(X_tb))
             output_hls = hls_model.predict(np.ascontiguousarray(X_tb))
-            hls4ml.writer.vivado_accelerator_writer.VivadoAcceleratorWriter.write_header_file(X_tb, X_tb, output_keras, output_hls, 10, OUTPUT_DIR + '/sdk/common/data.h')
+            hls4ml.writer.vivado_accelerator_writer.VivadoAcceleratorWriter.write_header_file(hls_model, X_tb, output_keras, output_hls, 10, OUTPUT_DIR + '/sdk/common/data.h')
             hls4ml.templates.VivadoAcceleratorBackend.make_bitfile(hls_model)
     
 if __name__ == "__main__":

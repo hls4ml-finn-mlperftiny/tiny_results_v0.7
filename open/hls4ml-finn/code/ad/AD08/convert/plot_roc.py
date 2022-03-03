@@ -41,7 +41,6 @@ def plot_roc(model, hls_model, X_npy, y_npy, data_split_factor=1, output_dir=Non
                 hls_predictions = hls_model.predict(X_test)
                 hls_errors = np.mean(np.square(X_test-hls_predictions), axis=1)
                 hls_pred[file_idx] = np.mean(hls_errors)
-        print(hls_pred)
         #generate auc and roc metrics
         y_test = y[index]
         k_fpr, k_tpr, k_threshold = metrics.roc_curve(y_test, keras_pred)
