@@ -151,7 +151,7 @@ def main(args):
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--config', type=str, help="specify yaml config")
+    parser.add_argument('-c', '--config', type=str, default='ad08.yml', help="specify yaml config")
 
     args = parser.parse_args()
 

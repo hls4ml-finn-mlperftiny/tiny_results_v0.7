@@ -60,7 +60,7 @@ __versions__ = "1.0.0"
 def command_line_chk():
     parser = argparse.ArgumentParser(description='Without option argument, it will not run properly.')
     parser.add_argument('-v', '--version', action='store_true', help="show application version")
-    parser.add_argument('-c', '--config', type=str, default = "baseline.yml", help="specify yml config")
+    parser.add_argument('-c', '--config', type=str, default = "ad08.yml", help="specify yml config")
     args = parser.parse_args()
     if args.version:
         print("===============================")
