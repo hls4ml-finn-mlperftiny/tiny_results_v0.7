@@ -13,9 +13,9 @@ And the and`FINN` team: <a href="https://xilinx.github.io/finn/"><img src="https
 * Team members:
   * Nicolò Ghielmetti, CERN
   * Jules Muhizi, Fermilab/Harvard
-  * Shvetank Prakash, Columbia/Harvard
-  * Rushil Roy, UCSD
-  * Hendrik Borras, University Heidelberg
+  * Jason Liang, Andy Meza, Tai Nguyen, Rushil Roy, Olivia Weng, UCSD
+  * Hendrik Borras, Ruprecht-Karls-Universität Heidelberg
+  * Aidan Yokuda, University of Washington 
   
 ## Hardware
 * The first board is a TUL PYNQ-Z2 based on Xilinx Zynq SoC (See https://www.tul.com.tw/productspynq-z2.html for more information).
