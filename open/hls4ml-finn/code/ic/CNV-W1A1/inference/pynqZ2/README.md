@@ -14,12 +14,20 @@ bash run-docker.sh build_custom ../pynqZ2
 ## Creating the bare metal application for MLPerf tiny
 The following steps are adapted from original instructions by Giuseppe:
 
-1. Make sure the shell has access to the Vivado 2019.1 tools and SDK.
+1. Make sure the shell has access to the Vivado 2019.1 tools and SDK, by setting the PATH environment variable to include them.
 2. Run the Vivado project script: 
 
 ```shell
-cd vivado_project
-make run
+cd vivado_project/sys
+make sys-hlsmover
 ```
-3. This will pop up the SDK, close the "welcome" tab and you should have the baremetal app.
 
+3. The Vivado script essentially opens the FINN project and exports the HDF file for the SDK in the directory `vivado_project/sdk/hdf/`. Note that when we use HLS datamovers we don't have to create our own Vivado project (as with the AXI DMA IP).
+4. Finally, let's create the SDK project + running it:
+```shell
+cd vivado_project/sdk
+make hlsmover-sdk
+make gui
+```
+5. This will pop up the SDK, close the "welcome" tab and you should have the baremetal app.
+6. The SDK project now contains all harness files to build the harness and run the accelerator + harness on the FPGA.

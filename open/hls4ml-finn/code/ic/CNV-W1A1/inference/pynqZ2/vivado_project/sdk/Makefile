@@ -19,7 +19,8 @@ axidma-sdk: --axidma-setup
 
 hlsmover-sdk: --hlsmover-setup
 	rm -f $(ACCNAME)_hlsmover_standalone/src/helloworld.c
-	cd  $(ACCNAME)_hlsmover_standalone/src && ln -s ../../common/hlsmover_main.c main.c && ln -s ../../common/src.h && ln -s ../../common/dst.h
+	# cd  $(ACCNAME)_hlsmover_standalone/src && ln -s ../../common/hlsmover_main.c main.c && ln -s ../../common/src.h && ln -s ../../common/dst.h
+	cd  $(ACCNAME)_hlsmover_standalone/src && cp ../../common/harness/main.c main.c && cp -r ../../common/harness/profile profile && cp -r ../../common/harness/monitor monitor
 .PHONY: hlsmover-sdk
 
 gui:

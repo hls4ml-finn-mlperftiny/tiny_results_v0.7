@@ -20,7 +20,7 @@ When running the network on hardware the validation should achieve an accuracy o
 ## Creating the bare metal application for MLPerf tiny
 The following steps are adapted from original instructions by Giuseppe:
 
-1. Make sure the shell has access to the Vivado 2019.1 tools and SDK.
+1. Make sure the shell has access to the Vivado 2019.1 tools and SDK, by setting the PATH environment variable to include them.
 2. Run the Vivado project script: 
 
 ```shell
