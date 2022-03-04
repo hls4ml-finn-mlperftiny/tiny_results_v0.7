@@ -10,7 +10,8 @@ help:
 
 sdk-hlsmover: --setup-hlsmover
 	rm -f $(ACCNAME)_hlsmover_standalone/src/helloworld.c
-	cd  $(ACCNAME)_hlsmover_standalone/src && ln -s ../../common/main_hlsmover.c main.c && ln -s ../../common/src.h && ln -s ../../common/dst.h
+	# cd  $(ACCNAME)_hlsmover_standalone/src && ln -s ../../common/main_hlsmover.c main.c && ln -s ../../common/src.h && ln -s ../../common/dst.h
+	cd  $(ACCNAME)_hlsmover_standalone/src && cp ../../common/harness/main.c main.c && cp -r ../../common/harness/profile profile && cp -r ../../common/harness/monitor monitor
 .PHONY: sdk-hlsmover
 
 gui:
