@@ -136,22 +136,25 @@ hls4ml-finn
 │               │                               └── variables
 │               └── training_checkpoint
 ├── results
-│   ├── artya7-100t
+│   ├── arty-a7-100t
 │   │   ├── ad
 │   │   │   └── AD08
-│   │   │       └── performance
+│   │   │       ├── accuracy
+│   │   │       ├── performance
+│   │   │       └── power
 │   │   └── ic
 │   │       └── RN07
 │   │           ├── accuracy
-│   │           └── performance
-│   └── pynqz2
+│   │           ├── performance
+│   │           └── power
+│   └── pynq-z2
 │       ├── ad
 │       │   └── AD08
 │       │       ├── accuracy
 │       │       ├── performance
 │       │       └── power
 │       ├── ic
-│       │   ├── BNN-W1A1
+│       │   ├── CNV-W1A1
 │       │   │   ├── accuracy
 │       │   │   ├── performance
 │       │   │   └── power
