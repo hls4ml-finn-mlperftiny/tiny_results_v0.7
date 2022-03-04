@@ -3,7 +3,7 @@ save_dir: ../../training/trained_model
 convert:
   ApplyPatches: 1
   RemoveSoftmax: 1
-  OutputDir: RN07-pynq-z2-rf16384-6p67ns_FIFO_OPT
+  OutputDir: vivado_project
   XilinxPart: xc7z020clg400-1
   Backend: VivadoAccelerator
   IOType: io_stream

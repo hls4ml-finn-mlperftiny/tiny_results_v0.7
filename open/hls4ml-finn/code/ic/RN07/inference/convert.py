@@ -247,7 +247,7 @@ def main(args):
             our_config['convert']['OutputDir'] = our_config['convert']['OutputDir'] + "_FIFO_OPT"
             hls4ml.report.read_vivado_report(our_config['convert']['OutputDir'])
         else:
-            hls_model.build(reset=False, csim=True, cosim=True, validation=True, synth=True, vsynth=True, export=True)
+            hls_model.build(reset=False, csim=True, cosim=False, validation=False, synth=True, vsynth=False, export=True)
             hls4ml.report.read_vivado_report(our_config['convert']['OutputDir'])
         if our_config['convert']['Backend'] == 'VivadoAccelerator':
             if our_config['convert']['Driver'] == 'c':
