@@ -11,10 +11,9 @@ convert:
   y_npy_val_dir: processed_data/64input_validation_data_ground_truths.npy
   x_npy_dir: processed_data/64input_test_data.npy
   y_npy_dir: processed_data/64input_test_data_ground_truths.npy
-  output_dir: pynq-z2/hls/ad08
+  output_dir: pynq-z2/hls/vivado_project
   clock_period: 10
   backend: VivadoAccelerator
   io_type: io_stream
   interface: axi_master
   driver: c
-  EEMBC_power: 1
