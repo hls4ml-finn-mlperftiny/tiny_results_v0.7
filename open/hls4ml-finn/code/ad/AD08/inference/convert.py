@@ -1,6 +1,6 @@
 from tkinter import Y
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import tensorflow as tf
 import yaml
 import argparse
@@ -83,6 +83,11 @@ def main(args):
     
     #prevent relu_merge from being applied
     hls_config['SkipOptimizers'] = ['relu_merge']
+    if bool(convert_config['EEMBC_power']):
+        hls_config['Model']['EEMBC_power'] = 1
+        OUTPUT_DIR = OUTPUT_DIR + '_power'
+    else:
+        OUTPUT_DIR = OUTPUT_DIR+'_accuracy'
 
     hls_model = convert_from_keras_model(model=model,
         clock_period=CLOCK_PERIOD,
