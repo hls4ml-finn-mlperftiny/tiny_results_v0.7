@@ -19,7 +19,7 @@ aware training library [Brevitas](https://github.com/Xilinx/brevitas).
 To reproduce the training the following steps should be taken:
 1. Install [PyTorch](https://pytorch.org/get-started/locally/)
 2. Install Brevitas, by following the install instructions here: https://github.com/Xilinx/brevitas#installation
-   1. Make sure to install the export `extras` for Brevitas with: `pip install brevitas`
+   1. Make sure to install the export `extras` for Brevitas with: `pip install brevitas[export]`
 3. Install finn-base with `pip install finn-base[onnx]`
    1. See: https://finn-base.readthedocs.io/en/latest/
 4. The training can now be run as the bnn-pynq example of Brevitas
