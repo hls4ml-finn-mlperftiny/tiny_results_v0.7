@@ -1,6 +1,6 @@
 from tkinter import Y
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import tensorflow as tf
 import yaml
 import argparse
@@ -56,7 +56,7 @@ def main(args):
     TB_DATA_DIR = convert_config['tb_data_dir']
     X_TEST_DATA_DIR = convert_config['x_npy_dir']
     Y_TEST_DATA_DIR = convert_config['y_npy_dir']
-    OUTPUT_DIR = convert_config['output_dir'] + f'_{BOARD_NAME}'
+    OUTPUT_DIR = convert_config['output_dir']
     HLS_CONFIG = convert_config['hls_config']
     CLOCK_PERIOD=convert_config['clock_period']
     BACKEND=convert_config['backend']
@@ -83,6 +83,13 @@ def main(args):
     
     #prevent relu_merge from being applied
     hls_config['SkipOptimizers'] = ['relu_merge']
+    #set EEMBC_power config if available
+    if 'EEMBC_power' in convert_config:
+        if bool(convert_config['EEMBC_power']):
+            hls_config['Model']['EEMBC_power'] = 1
+            OUTPUT_DIR = OUTPUT_DIR + '_power'
+        else:
+            OUTPUT_DIR = OUTPUT_DIR + '_accuracy'
 
     hls_model = convert_from_keras_model(model=model,
         clock_period=CLOCK_PERIOD,
@@ -149,7 +156,7 @@ def main(args):
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--config', type=str, default='ad08.yml', help="specify yaml config")
+    parser.add_argument('-c', '--config', type=str, default='ad08_pynq.yml', help="specify yaml config")
 
     args = parser.parse_args()
 
