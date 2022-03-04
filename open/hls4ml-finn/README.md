@@ -36,8 +36,13 @@ hls4ml-finn
 │   ├── ad
 │   │   └── AD08
 │   │       ├── inference
-│   │       │   └── arty-a7-100t
-│   │       │       └── vivado_project_accuracy
+│   │       │   ├── arty-a7-100t
+│   │       │   │   └── vivado_project_accuracy
+│   │       │   │       ├── hdf
+│   │       │   │       └── sdk
+│   │       │   │           └── common
+│   │       │   └── pynq-z2
+│   │       │       └── vivado_project
 │   │       │           ├── hdf
 │   │       │           └── sdk
 │   │       │               └── common
