@@ -1,21 +1,15 @@
 ## Build stitched-IP for MLPerf tiny and bitfile for PYNQ
 
-The build is currently configured for the PYNQ-Z2 board and a throughput of about 200k FPS at a clock frequency of 100 MHz.
+The build is currently configured for the PYNQ-Z2 board at a clock frequency of 100 MHz.
 
-1. Copy the trained `QONNX_model.onnx` model from the training folder. The command is: `cp ../../training/training_checkpoint/QONNX_model.onnx .`
-2. (Optional) Download the pre-processed validation data using the `get-kws-data.sh` script.
-3. Launch the build as follows:
+1. Copy the trained `conv-w1a1.onnx` model from the training folder to the model folder. The command is: `cp ../../training/cnv-w1a1.onnx models`
+2. Launch the build as follows:
 ```shell
 # cd to where the FINN compiler was cloned to
 cd ../finn
 # launch the build on the build foler
 bash run-docker.sh build_custom ../pynqZ2
 ```
-
-4. The generated outputs will be exported to a folder called `<timestamp>_output_<onnx_file_name>_<platform>`. 
-You can find a description of the generated files [here](https://finn-dev.readthedocs.io/en/latest/command_line.html#simple-dataflow-build-mode).
-The folder will additionally include the quantized inputs for verification (`all_validation_KWS_data_inputs_len_10102.npy`) and the expected outputs (`all_validation_KWS_data_outputs_len_10102.npy`).
-When running the network on hardware the validation should achieve an accuracy of just below 89 %. Note that this accuracy is NOT the test accuracy.
 
 ## Creating the bare metal application for MLPerf tiny
 The following steps are adapted from original instructions by Giuseppe:
@@ -32,8 +26,9 @@ make sys-hlsmover
 4. Finally, let's create the SDK project + running it:
 ```shell
 cd vivado_project/sdk
-make sdk-hlsmover
+make hlsmover-sdk
 make gui
 ```
 5. This will pop up the SDK, close the "welcome" tab and you should have the baremetal app.
 6. The SDK project now contains all harness files to build the harness and run the accelerator + harness on the FPGA.
+7. Note: For accuracy/timing measurements the UART baud rate needs to be set to `115200`, while for power measurements the baud rate needs to be `9600`.

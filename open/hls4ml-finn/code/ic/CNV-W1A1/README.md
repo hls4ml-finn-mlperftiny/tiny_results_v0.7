@@ -11,4 +11,4 @@ Instructions on how to synthesise the CNV-W1A1 model and how to build the bare m
   * For instructions for the PYNQ-Z2 board, on how to synthesise the model and how to build the bare metal application.
 * `/inference/arty-a7-100t/README.md`
   * For instructions for the Arty A7-100T board, on how to synthesise the model and how to build the bare metal application.
-  * NOTE: Note yet included!
+  * NOTE: Not yet included!
