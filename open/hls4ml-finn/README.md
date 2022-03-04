@@ -2,7 +2,7 @@
 
 By the collaboration between the `hls4ml` team: <a href="https://fastmachinelearning.org/"><img src="https://fastmachinelearning.org/hls4ml/_images/hls4ml_logo.png" alt="hls4ml logo" width="300"/></a>
 
-And the and`FINN` team: <a href="https://xilinx.github.io/finn/"><img src="https://raw.githubusercontent.com/Xilinx/finn/github-pages/docs/img/finn-logo.png" alt="FINN logo" width="300"/></a>
+And the `FINN` team: <a href="https://xilinx.github.io/finn/"><img src="https://raw.githubusercontent.com/Xilinx/finn/github-pages/docs/img/finn-logo.png" alt="FINN logo" width="300"/></a>
 
 * Contacts:
   * Ben Hawks, email: <bhawks@fnal.gov>, GitHub: [@ben-hawks](https://github.com/ben-hawks)
