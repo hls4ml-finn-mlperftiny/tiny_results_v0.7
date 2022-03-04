@@ -9,7 +9,7 @@ The build is currently configured for the PYNQ-Z2 board and a throughput of abou
 # cd to where the FINN compiler was cloned to
 cd ../finn
 # launch the build on the build foler
-bash run-docker.sh build_custom ../pynqZ2
+bash run-docker.sh build_custom ../pynq-z2
 ```
 
 4. The generated outputs will be exported to a folder called `<timestamp>_output_<onnx_file_name>_<platform>`. 
@@ -37,3 +37,4 @@ make gui
 ```
 5. This will pop up the SDK, close the "welcome" tab and you should have the baremetal app.
 6. The SDK project now contains all harness files to build the harness and run the accelerator + harness on the FPGA.
+7. Note: For accuracy/timing measurements the UART baud rate needs to be set to `115200`, while for power measurements the baud rate needs to be `9600`.
