@@ -1,8 +1,9 @@
 # Tiny MLPerf™ v0.7 `hls4ml-finn` Xilinx PYNQ-Z2 and Arty A7-100T Open Submission
 
-By the collaboration between the `hls4ml` team: <a href="https://fastmachinelearning.org/"><img src="https://fastmachinelearning.org/hls4ml/_images/hls4ml_logo.png" alt="hls4ml logo" width="300"/></a>
+<a href="https://fastmachinelearning.org/"><img src="https://fastmachinelearning.org/hls4ml/_images/hls4ml_logo.png" alt="hls4ml logo" width="300"/></a>
+<a href="https://xilinx.github.io/finn/"><img src="https://raw.githubusercontent.com/Xilinx/finn/github-pages/docs/img/finn-logo.png" alt="FINN logo" width="300"/></a>
 
-And the and`FINN` team: <a href="https://xilinx.github.io/finn/"><img src="https://raw.githubusercontent.com/Xilinx/finn/github-pages/docs/img/finn-logo.png" alt="FINN logo" width="300"/></a>
+By the collaboration between the `hls4ml` and `FINN` teams.
 
 * Contacts:
   * Ben Hawks, email: <bhawks@fnal.gov>, GitHub: [@ben-hawks](https://github.com/ben-hawks)
@@ -13,10 +14,10 @@ And the and`FINN` team: <a href="https://xilinx.github.io/finn/"><img src="https
 * Team members:
   * Nicolò Ghielmetti, CERN
   * Jules Muhizi, Fermilab/Harvard
-  * Jason Liang, Andy Meza, Tai Nguyen, Rushil Roy, Olivia Weng, UCSD
+  * Ryan Kastner, Jason Liang, Andy Meza, Tai Nguyen, Rushil Roy, Olivia Weng, UC San Diego
   * Hendrik Borras, Ruprecht-Karls-Universität Heidelberg
-  * Aidan Yokuda, University of Washington 
-  
+  * Aidan Yokuda, University of Washington
+
 ## Hardware
 * The first board is a TUL PYNQ-Z2 based on Xilinx Zynq SoC (See https://www.tul.com.tw/productspynq-z2.html for more information).
 
@@ -27,161 +28,147 @@ And the and`FINN` team: <a href="https://xilinx.github.io/finn/"><img src="https
 <img src="https://digilent.com/reference/_media/reference/programmable-logic/arty/arty-0.png" alt="Arty A7-100T" width="400"/>
 
 
-# EVERYTHING BELOW STILL NEEDS ADJUSTMENTS!
-
 ## Code structure
-The code is structured as follows
+The code/results are structured as follows:
 ```
-hls4ml
+hls4ml-finn
 ├── code
 │   ├── ad
-│   │   └── AD03
+│   │   └── AD08
 │   │       ├── inference
-│   │       │   ├── hls
-│   │       │   ├── sdk
-│   │       │   ├── sys
-│   │       │   └── utils
+│   │       │   └── arty-a7-100t
+│   │       │       └── vivado_project_accuracy
+│   │       │           ├── hdf
+│   │       │           └── sdk
+│   │       │               └── common
 │   │       └── training
-│   │           ├── convert.py
-│   │           ├── model
-│   │           │   └── ad03
-│   │           │       └── model_ToyCar.h5
-│   │           ├── train.py
-│   └── ic
-│       └── RN06
+│   │           └── trained_model
+│   ├── ic
+│   │   ├── CNV-W1A1
+│   │   │   ├── inference
+│   │   │   │   ├── arty-a7-100t
+│   │   │   │   │   ├── folding_config
+│   │   │   │   │   ├── models
+│   │   │   │   │   └── vivado_project
+│   │   │   │   │       ├── sdk
+│   │   │   │   │       │   ├── common
+│   │   │   │   │       │   │   └── harness
+│   │   │   │   │       │   │       └── api
+│   │   │   │   │       │   └── hdf
+│   │   │   │   │       └── sys
+│   │   │   │   │           ├── tcl
+│   │   │   │   │           ├── verilog
+│   │   │   │   │           └── xdc
+│   │   │   │   └── pynq-z2
+│   │   │   │       ├── folding_config
+│   │   │   │       ├── models
+│   │   │   │       └── vivado_project
+│   │   │   │           ├── dataset
+│   │   │   │           ├── sdk
+│   │   │   │           │   ├── common
+│   │   │   │           │   │   └── harness
+│   │   │   │           │   │       ├── monitor
+│   │   │   │           │   │       │   └── th_api
+│   │   │   │           │   │       └── profile
+│   │   │   │           │   │           └── th_api
+│   │   │   │           │   └── hdf
+│   │   │   │           └── sys
+│   │   │   │               ├── docs
+│   │   │   │               └── tcl
+│   │   │   └── training
+│   │   │       └── experiments
+│   │   └── RN07
+│   │       ├── inference
+│   │       │   ├── arty-a7-100t
+│   │       │   │   ├── vivado_project_accuracy
+│   │       │   │   │   ├── hdf
+│   │       │   │   │   └── sdk
+│   │       │   │   │       └── common
+│   │       │   │   └── vivado_project_power
+│   │       │   │       ├── hdf
+│   │       │   │       └── sdk
+│   │       │   │           └── common
+│   │       │   └── pynq-z2
+│   │       │       └── vivado_project
+│   │       │           ├── hdf
+│   │       │           └── sdk
+│   │       │               └── common
+│   │       └── training
+│   │           └── trained_model
+│   └── kws
+│       └── KWS-W3A3
 │           ├── inference
-│           │   ├── hls
-│           │   ├── sdk
-│           │   ├── sys
-│           │   └── utils
+│           │   ├── arty-a7-100t
+│           │   │   └── vivado_project
+│           │   │       ├── sdk
+│           │   │       │   ├── common
+│           │   │       │   │   └── harness
+│           │   │       │   │       └── api
+│           │   │       │   └── hdf
+│           │   │       └── sys
+│           │   │           ├── tcl
+│           │   │           ├── verilog
+│           │   │           └── xdc
+│           │   └── pynq-z2
+│           │       └── vivado_project
+│           │           ├── sdk
+│           │           │   ├── common
+│           │           │   │   └── harness
+│           │           │   │       ├── monitor
+│           │           │   │       │   └── th_api
+│           │           │   │       └── profile
+│           │           │   │           └── th_api
+│           │           │   └── hdf
+│           │           └── sys
+│           │               └── tcl
 │           └── training
-│               ├── convert.py
-│               ├── resnet_v1_eembc_RN06
-│               │   └── model_best.h5
-│               └── train.py
+│               ├── data
+│               ├── kws_bin_files
+│               ├── model
+│               ├── tiny_results_v0.5
+│               │   └── closed
+│               │       └── reference
+│               │           └── code
+│               │               └── training
+│               │                   └── keyword_spotting
+│               │                       └── trained_models
+│               │                           └── kws_ref_model
+│               │                               └── variables
+│               └── training_checkpoint
 ├── results
-│   └── pynqz2
+│   ├── arty-a7-100t
+│   │   ├── ad
+│   │   │   └── AD08
+│   │   │       ├── accuracy
+│   │   │       ├── performance
+│   │   │       └── power
+│   │   └── ic
+│   │       └── RN07
+│   │           ├── accuracy
+│   │           ├── performance
+│   │           └── power
+│   └── pynq-z2
 │       ├── ad
-│       │   ├── accuracy
-│       │   └── performance
-│       └── ic
-│           ├── accuracy
-│           └── performance
+│       │   └── AD08
+│       │       ├── accuracy
+│       │       ├── performance
+│       │       └── power
+│       ├── ic
+│       │   ├── CNV-W1A1
+│       │   │   ├── accuracy
+│       │   │   ├── performance
+│       │   │   └── power
+│       │   └── RN07
+│       │       ├── accuracy
+│       │       ├── performance
+│       │       └── power
+│       └── kws
+│           └── KWS-W3A3
+│               ├── accuracy
+│               ├── performance
+│               └── power
 └── systems
-
 ```
-* For both the anomaly detection model (AD03) and the image classification model (RN06), there are `training` and `inference` subdirectories.
-* Under `training`, there are scripts to train the model with `QKeras` (`train.py`) and convert it to a Xilinx HLS/Vivado/SDK project using `hls4ml` (`convert.py`).
-* The configruation is controlled by `yml` files.
-* For convenience, the pretrained models in `.h5` format are provided in the repository as indicated.
-* Under `inference`, the Xilinx HLS, Vivado, and SDK projects will be automatically created after successfully running `convert.py` in the `hls`, `sys`, and `sdk` folders respectively.
-
-## Setup
-
-* Install miniconda from here: https://docs.conda.io/en/latest/miniconda.html
-* Create the environment:
-```bash
-conda-env create -f environment.yml
-```
-* Activate the environment:
-```bash
-conda activate tiny-mlperf-env
-```
-* Install Vivado 2019.1 from https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html
-* Download PYNQ-Z2 board files (from https://dpoauwgwqsy2x.cloudfront.net/Download/pynq-z2.zip) and [install appropriately](https://pynq.readthedocs.io/en/v2.5/overlay_design_methodology/board_settings.html) by extracting and copying files to:
-```bash
-<path_to_Vivado>/Vivado/2019.1/data/boards/board_files
-```
-* Setup Vivado 2019.1:
-```bash
-source <path_to_Vivado>/Vivado/2019.1/settings64.sh
-```
-* Ensure PYNQ-Z2 board is connected (and powered) by USB and visible.
-<img src="https://user-images.githubusercontent.com/4932543/120665682-d971d880-c440-11eb-8154-215034d89c01.jpg" alt="RN06 running" width="400"/>
-
-## Training with `QKeras`
-
-In this step, you will download the dataset and perform a quantization-aware training with QKeras.  
-
-### AD03 model
-
-* Change directory
-```bash
-cd code/ad/AD03/training/
-```
-* Download dataset for AD03:
-```bash
-./get_dataset.sh
-```
-* Train AD03, pretrained model is provided as `model/ad03/model_ToyCar.h5`:
-```bash
-python train.py -c AD03.yml
-```
-_n.b. if you don't have a GPU, you can comment out the `import setGPU` (true also for later python scripts)_
-
-### RN06 model
-
-* Change directory
-```bash
-cd code/ic/RN06/training/
-```
-* Train RN06, pretrained model is provided as `resnet_v1_eembc_RN06/model_best.h5`:
-```bash
-python train.py -c RN06_pynqz2.yml
-```
-
-## Conversion with `hls4ml`
-
-In this step, you will ingest the quantization-aware training performed in the previous step and convert it to firmware using hls4ml.  The hls4ml configuration, `pynqz2.yml` has details such as the implementation architecture.  
-
-### AD03 model
-
-* Change directory
-```bash
-cd code/ad/AD03/training/
-```
-* Get test data:
-```bash
-python generate_test_data.py -c AD03.yml
-```
-* Convert AD03:
-```bash
-python convert.py -c pynqz2.yml
-```
-
-### RN06 model
-
-* Change directory
-```bash
-cd code/ic/RN06/training/
-```
-* Get test data:
-```bash
-source get_test_data.sh
-```
-* Convert RN06:
-```bash
-python convert.py -c RN06_pynqz2.yml
-```
-
-## Program FPGA and run software
-
-* Change directory
-```bash
-cd code/ic/<model_name>/inference/sdk/
-```
-* Open Xilinx SDK GUI
-```bash
-make gui
-```
-* Program the FPGA with the bit file in SDK
-   * <img width="600" alt="Screen Shot 2021-06-06 at 10 20 14 PM" src="https://user-images.githubusercontent.com/4932543/120962896-78ceee00-c715-11eb-8888-540dcf3bed39.png"/>
-* Run test harness software in SDK
-   * <img width="600" alt="Screen Shot 2021-06-06 at 10 22 07 PM" src="https://user-images.githubusercontent.com/4932543/120963020-b6337b80-c715-11eb-93c7-e0de1fa2c070.png"/>
-* Download EEMBC runner GUI and AD/IC benchmark datasets (See https://github.com/eembc/ulpmark-ml) 
-* Open EEMBC runner GUI and and perform measurements, follow the instructions on the eembc README 
-   * <img width="400" alt="Screen Shot 2021-06-06 at 10 18 51 PM" src="https://user-images.githubusercontent.com/4932543/120962751-32798f00-c715-11eb-816a-c1ab4f11da47.png"/>
-
-## Boot from Flash
-
-The PYNQ--Z2 supports Quad SPI Flash. Please follow these [instructions](code/ad/AD03/inference/sdk/pynqz2/README.md) to program and boot from the Flash memory.
+* For both the different tasks/models, there are `training` and `inference` subdirectories.
+* Under `training`, there are scripts/directions to train the models as well as a pretrained model.
+* Under `inference`, the Xilinx HLS, Vivado, and SDK projects will be automatically created by following the corresponding READMEs.

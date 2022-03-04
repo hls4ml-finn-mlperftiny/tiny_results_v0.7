@@ -10,7 +10,7 @@ help:
 
 sdk: --setup
 	rm -f $(ACCNAME)_standalone/src/helloworld.c
-	cd  $(ACCNAME)_standalone/src && cp -r ../../common/harness/api api && cp ../../common/harness/* .
+	cd  $(ACCNAME)_standalone/src && cp -r ../../common/harness/* .
 .PHONY: sdk
 
 --setup-ocm:
