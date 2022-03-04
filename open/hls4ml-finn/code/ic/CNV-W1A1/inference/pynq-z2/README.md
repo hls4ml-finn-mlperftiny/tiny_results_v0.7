@@ -8,7 +8,7 @@ The build is currently configured for the PYNQ-Z2 board at a clock frequency of 
 # cd to where the FINN compiler was cloned to
 cd ../finn
 # launch the build on the build foler
-bash run-docker.sh build_custom ../pynqZ2
+bash run-docker.sh build_custom ../pynq-z2
 ```
 
 ## Creating the bare metal application for MLPerf tiny

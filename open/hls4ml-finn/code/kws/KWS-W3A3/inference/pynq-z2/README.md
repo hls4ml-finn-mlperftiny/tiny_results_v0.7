@@ -9,7 +9,7 @@ The build is currently configured for the PYNQ-Z2 board and a throughput of abou
 # cd to where the FINN compiler was cloned to
 cd ../finn
 # launch the build on the build foler
-bash run-docker.sh build_custom ../pynqZ2
+bash run-docker.sh build_custom ../pynq-z2
 ```
 
 4. The generated outputs will be exported to a folder called `<timestamp>_output_<onnx_file_name>_<platform>`. 
