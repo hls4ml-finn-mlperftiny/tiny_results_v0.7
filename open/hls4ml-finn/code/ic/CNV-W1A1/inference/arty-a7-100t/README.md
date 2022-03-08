@@ -8,7 +8,7 @@ The build is currently configured for the Arty A7-100T board at a clock frequenc
 # cd to where the FINN compiler was cloned to
 cd ../finn
 # launch the build on the build foler
-bash run-docker.sh build_custom ../arty-a7-100
+bash run-docker.sh build_custom ../arty-a7-100t
 ```
 
 ## Creating the bare metal application for MLPerf tiny
@@ -38,9 +38,9 @@ make gui
 ```
 5. This will pop up the SDK, close the "welcome" tab and you should have the baremetal app.
 6. The SDK project now contains all harness files to build the harness and run the accelerator + harness on the FPGA.
-7. Program the FPGA with the bit file in SDK
+8. Program the FPGA with the bit file in the SDK. The screenshot below highlights the corresponding context menu and button to press.
    * <img width="600" alt="Screen Shot 2021-06-06 at 10 20 14 PM" src="https://user-images.githubusercontent.com/4932543/120962896-78ceee00-c715-11eb-8888-540dcf3bed39.png"/>
-8. Run test harness software in SDK
+9. Build the software project, **then** run test harness software in the SDK. The screenshot below highlights the button for running the harness. The button for building the software project can be found in the same context menu, further above the "Run as" filed.
    * <img width="600" alt="Screen Shot 2021-06-06 at 10 22 07 PM" src="https://user-images.githubusercontent.com/4932543/120963020-b6337b80-c715-11eb-93c7-e0de1fa2c070.png"/>
 9. Download EEMBC runner GUI and for the dataset the KWS bin files have been re-quantized for this network, they can be found in the following folder, relative to here: `../../training/kws_bin_files`
 10. Open EEMBC runner GUI and and perform measurements, follow the instructions on the eembc README 
