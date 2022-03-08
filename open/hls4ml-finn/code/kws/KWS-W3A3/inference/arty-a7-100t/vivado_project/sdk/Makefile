@@ -9,7 +9,6 @@ help:
 .PHONY: --setup
 
 sdk: --setup
-	rm -f $(ACCNAME)_standalone/src/helloworld.c
 	cd  $(ACCNAME)_standalone/src && cp -r ../../common/harness/* .
 .PHONY: sdk
 
