@@ -16,7 +16,7 @@
 #define CMD_N (1)
 #endif
 #else
-#define ITER_N 50
+#define ITER_N 1
 #define CMD_CNT (10102)
 #ifndef CMD_N
 #define CMD_N (10102)
@@ -71,31 +71,36 @@ static XTmrCtr TimerCounterInst;
 #define TIMER_CNTR_0        0
 #define TIMER_CNTR_1        1
 
-u64 get_32b_counter_value() {
+u64 get_64b_counter_clk() {
     u64 counter = 0, lo_counter = 0, hi_counter = 0; 
     lo_counter = XTmrCtr_GetValue(&TimerCounterInst, TIMER_CNTR_0);
-    //hi_counter = XTmrCtr_GetValue(&TimerCounterInst, TIMER_CNTR_1);
+    hi_counter = XTmrCtr_GetValue(&TimerCounterInst, TIMER_CNTR_1);
     counter = (hi_counter << 32ull) | lo_counter;
     return counter;
 }
 
-u64 start_32b_counter() {
+u64 start_64b_counter_clk() {
     XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_0);
-    //XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_1);
-    u64 value = get_32b_counter_value();
+    XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_1);
+    u64 value = get_64b_counter_clk();
     return value;
 }
 
-u64 stop_32b_counter() {
+u64 stop_64b_counter_clk() {
     XTmrCtr_Stop(&TimerCounterInst, TIMER_CNTR_0);
-    //XTmrCtr_Stop(&TimerCounterInst, TIMER_CNTR_1);
-    u64 value = get_32b_counter_value();
+    XTmrCtr_Stop(&TimerCounterInst, TIMER_CNTR_1);
+    u64 value = get_64b_counter_clk();
     return value;
 }
 
-double get_elapsed_time(u64 clk_start, u64 clk_stop) {
+double get_elapsed_time_sec(u64 clk_start, u64 clk_stop) {
     return ((clk_stop-clk_start) * (1.0/XPAR_AXI_TIMER_MCU_CLOCK_FREQ_HZ));
 }
+
+double get_elapsed_time_usec(u64 clk_start, u64 clk_stop) {
+    return ((clk_stop-clk_start) * (1.0/XPAR_AXI_TIMER_MCU_CLOCK_FREQ_HZ))*1000000;
+}
+
 
 /* AXI DMA initialization routine */
 int init_axi_dma(u16 device_id) {
@@ -173,21 +178,22 @@ void dump_data(const char* label, u8* data, unsigned sample_count, unsigned feat
 int main(int argc, char** argv) {
 
     int status;
-    u64 start = 0, stop = 0;
-    double calibration_time = 0;
-    double sw_elapsed = 0;
+    u64 start_clk = 0, stop_clk = 0;
+    double calibration_time_sec = 0;
+    double calibration_time_usec = 0;
+    double sw_elapsed_sec = 0;
     char __attribute__ ((unused)) dummy; /* dummy input */
 
     int hw_errors;
-    double hw_elapsed = 0;
-    double cache_elapsed = 0;
+    double hw_elapsed_sec = 0;
+    double cache_elapsed_sec = 0;
 
     /* Initialize platform (uart and caches) */
     init_platform();
 
     xil_printf("\r\n");
     xil_printf("INFO: =========================================================================\r\n");
-    xil_printf("INFO: FINN KWS-MLP-W3A3 (w/ polling, AXI DMA, batch = 1)\r\n");
+    xil_printf("INFO: FINN KWS mlp-w3a3 (w/ polling, AXI DMA, batch = 1)\r\n");
     xil_printf("INFO: =========================================================================\r\n");
 
     init_axi_dma(DMA_DEV_ID);
@@ -198,12 +204,17 @@ int main(int argc, char** argv) {
       return XST_FAILURE;
     }
 
+    /* Enable cascade mode for 64bit timer (2 32-bit registers) */
+    XTmrCtr_SetOptions(&TimerCounterInst, TIMER_CNTR_0, XTC_AUTO_RELOAD_OPTION | XTC_CASCADE_MODE_OPTION);
+
     /* Calibration */
-    start = start_32b_counter();
-    sleep(1);
-    stop = stop_32b_counter();
-    calibration_time = get_elapsed_time(start, stop);
-    printf("INFO: Time calibration for one second (%f sec)\r\n", calibration_time);
+    printf("INFO: Starting time calibration for 90 seconds...\r\n");
+    start_clk = start_64b_counter_clk();
+    sleep(90);
+    stop_clk = stop_64b_counter_clk();
+    calibration_time_sec = get_elapsed_time_sec(start_clk, stop_clk);
+    calibration_time_usec = get_elapsed_time_usec(start_clk, stop_clk);
+    printf("INFO: Time calibration for 90 seconds (%f sec, %f usec)\r\n", calibration_time_sec, calibration_time_usec);
 
     /* Initialize memory */
     xil_printf("INFO: Initialize memory\r\n");
@@ -234,10 +245,10 @@ int main(int argc, char** argv) {
 
     /* ****** SOFTWARE REFERENCE ****** */
     xil_printf("INFO: Run SW reference model\r\n");
-    start = start_32b_counter();
+    start_clk = start_64b_counter_clk();
     finn_cnv_w1a1_sw(rx_buffer_gld_ptr, tx_buffer_ptr, CMD_CNT, INPUT_N_FEATURES, OUTPUT_N_FEATURES);
-    stop = stop_32b_counter();
-    sw_elapsed = get_elapsed_time(start, stop);
+    stop_clk = stop_64b_counter_clk();
+    sw_elapsed_sec = get_elapsed_time_sec(start_clk, stop_clk);
 
 
     /* ****** ACCELERATOR ****** */
@@ -250,13 +261,13 @@ int main(int argc, char** argv) {
     for (u32 b = 0; b < ITER_N; b++)
     for (u32 idx = 0; idx < CMD_N; idx++) {
 
-        start = start_32b_counter();
+        start_clk = start_64b_counter_clk();
         Xil_DCacheFlushRange((UINTPTR)(tx_buffer_ptr + idx * INPUT_N_FEATURES), INPUT_N_FEATURES * sizeof(u8));
         Xil_DCacheFlushRange((UINTPTR)(rx_buffer_ptr + idx * OUTPUT_N_FEATURES), OUTPUT_N_FEATURES * sizeof(u8));
-        stop = stop_32b_counter();
-        cache_elapsed = get_elapsed_time(start, stop);
+        stop_clk = stop_64b_counter_clk();
+        cache_elapsed_sec = get_elapsed_time_sec(start_clk, stop_clk);
 
-        start = start_32b_counter();
+        start_clk = start_64b_counter_clk();
         status = XAxiDma_SimpleTransfer(&axi_dma, (UINTPTR)(tx_buffer_ptr + idx * INPUT_N_FEATURES), INPUT_N_FEATURES, XAXIDMA_DMA_TO_DEVICE);
         if (status != XST_SUCCESS) {
             xil_printf("ERROR: DMA_TO_DEVICE failed, status %u\r\n", status);
@@ -276,14 +287,14 @@ int main(int argc, char** argv) {
         while (XAxiDma_Busy(&axi_dma, XAXIDMA_DMA_TO_DEVICE)) {
             ; /* Wait */
         }
-        stop = stop_32b_counter();
-        hw_elapsed += get_elapsed_time(start, stop);
+        stop_clk = stop_64b_counter_clk();
+        hw_elapsed_sec += get_elapsed_time_sec(start_clk, stop_clk);
 
-        start = start_32b_counter();
+        start_clk = start_64b_counter_clk();
         //Xil_DCacheFlushRange((UINTPTR)(rx_buffer_ptr + idx * OUTPUT_N_FEATURES), OUTPUT_N_FEATURES * sizeof(data_t));
         Xil_DCacheInvalidateRange((UINTPTR)(rx_buffer_ptr + idx * OUTPUT_N_FEATURES), OUTPUT_N_FEATURES * sizeof(u8));
-        stop = stop_32b_counter();
-        cache_elapsed += get_elapsed_time(start, stop);
+        stop_clk = stop_64b_counter_clk();
+        cache_elapsed_sec += get_elapsed_time_sec(start_clk, stop_clk);
     }
 
     /* ****** VALIDATION ****** */
@@ -295,11 +306,11 @@ int main(int argc, char** argv) {
     //dump_data("hw_dst", (u8*)(rx_buffer_ptr), CMD_N, OUTPUT_N_FEATURES, 1, 0);
 #endif
 
-    printf("INFO: Total SW reference model execution time: %f sec\r\n", sw_elapsed);
-    printf("INFO: Total HW accelerator execution time: %f sec\r\n", hw_elapsed);
-    printf("INFO: Average HW accelerator execution time: %f sec\r\n", hw_elapsed / (CMD_N * ITER_N));
-    printf("INFO: Total cache flush time: %f sec\r\n", cache_elapsed);
-    //printf("INFO: Accelerator/software speedup (the sofware is fake so this does not count...): %.2f X\r\n", (sw_elapsed >= (hw_elapsed+cache_elapsed))?(sw_elapsed/(hw_elapsed+cache_elapsed)):-((hw_elapsed+cache_elapsed)/sw_elapsed));
+    printf("INFO: Total SW reference model execution time: %f sec\r\n", sw_elapsed_sec);
+    printf("INFO: Total HW accelerator execution time: %f sec\r\n", hw_elapsed_sec);
+    printf("INFO: Average HW accelerator execution time: %f sec\r\n", hw_elapsed_sec / (CMD_N * ITER_N));
+    printf("INFO: Total cache flush time: %f sec\r\n", cache_elapsed_sec);
+    //printf("INFO: Accelerator/software speedup (the sofware is fake so this does not count...): %.2f X\r\n", (sw_elapsed_sec >= (hw_elapsed_sec+cache_elapsed_sec))?(sw_elapsed_sec/(hw_elapsed_sec+cache_elapsed_sec)):-((hw_elapsed_sec+cache_elapsed_sec)/sw_elapsed_sec));
 
     /* Accelerator validation */
     hw_errors = 0;
@@ -316,10 +327,17 @@ int main(int argc, char** argv) {
     printf("INFO: Total errors = %d (out of %d elements)\r\n", hw_errors, OUTPUT_N_FEATURES * CMD_N);
     printf("INFO: Error rate = %.1f%%\r\n", error_rate * 100);
     printf("INFO: Model accuracy = %.1f%%\r\n", 100 - (error_rate*100));
+#if 0
     if (hw_errors > 0)
         xil_printf("INFO: Accelerator validation: FAIL\r\n");
     else
         xil_printf("INFO: Accelerator validation: PASS!\r\n");
+#else
+    xil_printf("INFO: *** ********************************** ***\r\n");
+    xil_printf("INFO: *** WE EXPECT A MODEL ACCURACY ~ 84.6%% ***\r\n");
+    xil_printf("INFO: *** WE COMPARE AGAINST GROUND TRUTH    ***\r\n");
+    xil_printf("INFO: *** ********************************** ***\r\n");
+#endif
 
 
     xil_printf("INFO: Done!\r\n");
