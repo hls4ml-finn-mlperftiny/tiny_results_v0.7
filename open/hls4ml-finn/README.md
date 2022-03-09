@@ -37,10 +37,18 @@ hls4ml-finn
 │   │   └── AD08
 │   │       ├── inference
 │   │       │   ├── arty-a7-100t
-│   │       │   │   └── vivado_project_accuracy
+│   │       │   │   ├── vivado_project_accuracy
+│   │       │   │   │   ├── hdf
+│   │       │   │   │   └── sdk
+│   │       │   │   │       └── common
+│   │       │   │   │           └── harness
+│   │       │   │   │               └── api
+│   │       │   │   └── vivado_project_power
 │   │       │   │       ├── hdf
 │   │       │   │       └── sdk
 │   │       │   │           └── common
+│   │       │   │               └── harness
+│   │       │   │                   └── api
 │   │       │   └── pynq-z2
 │   │       │       └── vivado_project
 │   │       │           ├── hdf
@@ -89,10 +97,14 @@ hls4ml-finn
 │   │       │   │   │   ├── hdf
 │   │       │   │   │   └── sdk
 │   │       │   │   │       └── common
+│   │       │   │   │           └── harness
+│   │       │   │   │               └── api
 │   │       │   │   └── vivado_project_power
 │   │       │   │       ├── hdf
 │   │       │   │       └── sdk
 │   │       │   │           └── common
+│   │       │   │               └── harness
+│   │       │   │                   └── api
 │   │       │   └── pynq-z2
 │   │       │       └── vivado_project
 │   │       │           ├── hdf
