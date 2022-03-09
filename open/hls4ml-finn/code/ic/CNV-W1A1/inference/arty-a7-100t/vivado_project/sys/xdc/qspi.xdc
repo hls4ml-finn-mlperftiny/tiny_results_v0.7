@@ -5,6 +5,13 @@
 
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
+#set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
+#set_property CONFIG_VOLTAGE 1.8 [current_design]
+#set_property CFGBVS GND [current_design]
+#set_property BITSTREAM.CONFIG.SPI_32BIT_ADDR YES [current_design]
+#set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+#set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES [current_design]
+
 # Quad SPI Flash
 set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_ss_io }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_cs
 set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { qspi_flash_io0_io }]; #IO_L1P_T0_D00_MOSI_14 Sch=qspi_dq[0]

@@ -16,7 +16,7 @@ To retrain the model from scratch, do
 cd training
 python train.py -c RN07.yml
 ```
-or simply take the pretrained model from the `training/trained_model` subfodler.
+or simply take the pretrained model from the `training/trained_model` subfolder.
 
 ## Inference and Synthesis
 

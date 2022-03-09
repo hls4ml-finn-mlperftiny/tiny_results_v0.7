@@ -52,22 +52,9 @@ methods from th_libc.h and all testharness methods from th_lib.h are here.
 
 // Use this to switch between DUT-direct (perf) & DUT-inderrect (energy) modes
 #ifndef EE_CFG_ENERGY_MODE
-#define EE_CFG_ENERGY_MODE 0
+#define EE_CFG_ENERGY_MODE 1
 #endif
 
-#if EE_CFG_ENERGY_MODE == 1
-//GPIO Config for Timestamp
-#include "xgpio.h"
-
-#define PIN 0x01
-#define GPIO_PMOD_PIN_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
-
-#define set_pin_high(InstancePtr, Mask) \
-        XGpio_DiscreteWrite(InstancePtr, 1, Mask)
-
-#define set_pin_low(InstancePtr, Mask) \
-        XGpio_DiscreteClear(InstancePtr, 1, Mask)
-#endif
 
 // This is a visual cue to the user when reviewing logs or plugging an
 // unknown device into the system.
