@@ -16,5 +16,5 @@ unzip $ZIPFILE -d dev_data
 rm $ZIPFILE
 
 echo 'Generating Test Data for Convert step:'
-mkdir ../convert/processed_data
+mkdir ../inference/processed_data
 python generate_test_data.py -c ad08.yml
