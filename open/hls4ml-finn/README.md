@@ -147,8 +147,17 @@ hls4ml-finn
 │   │   │       ├── accuracy
 │   │   │       ├── performance
 │   │   │       └── power
-│   │   └── ic
-│   │       └── RN07
+│   │   ├── ic
+│   │   │   ├── CNV-W1A1
+│   │   │   │   ├── accuracy
+│   │   │   │   ├── performance
+│   │   │   │   └── power
+│   │   │   └── RN07
+│   │   │       ├── accuracy
+│   │   │       ├── performance
+│   │   │       └── power
+│   │   └── kws
+│   │       └── KWS-W3A3
 │   │           ├── accuracy
 │   │           ├── performance
 │   │           └── power
