@@ -32,8 +32,9 @@ in th_results is copied from the original in EEMBC.
 #include "xaxidma.h"
 #include "xil_cache.h"   /* enable/disable caches etc */
 #include "platform.h"
-//#include "src_mini.h"
+#include "src_mini.h"
 #include <string>
+#include "unistd.h"  /* usleep */
 /**
  * Timing from Xilinx IP Timer Counter.
  */
@@ -49,6 +50,8 @@ extern uint8_t *gp_buff[MAX_DB_INPUT_SIZE];
 extern size_t   g_buff_size;
 extern size_t   g_buff_pos;
 
+
+#if EE_CFG_ENERGY_MODE == 0
 /* Profiling utilities */
 #include "xtmrctr.h"     /* timer, Xilinx IP Timer Counter */
 static XTmrCtr TimerCounterInst;
@@ -60,21 +63,6 @@ double th_timestamp_counts;
 u64 th_timer_timestamp;
 u64 th_timer_start;
 u64 th_calibration_time;
-
-//unsigned char src_data[490] = {
-//-81, -80, -81, -82, -83, -85, -85, -87, -92, -89, -87, -89, -89, -83, -83, -87, -56, -42, -35, -34, -25, -7, 32, 48, 36, 39, 31, 23, 14, 9, 5, -3, -11, -14, -13, -18, -28, -37, -42, -32, -22, -33, -44, -56, -64, -74, -72, -80, -80, 9, 10, 9, 5, 6, 8, 5, 6, 7, 6, 5, 5, 8, 8, 9, 7, 27, 32, 33, 33, 30, 22, 15, 14, 12, 14, 13, 16, 18, 18, 20, 25, 26, 33, 34, 34, 31, 29, 22, 17, 4, 5, 9, 12, 10, 7, 9, 7, 7, 6, 6, 7, 4, 4, 5, 5, 4, 5, 6, 7, 6, 8, 5, 12, 5, 19, 19, 18, 16, 14, 12, 5, -4, -1, 1, 1, 2, 2, 3, 2, 4, 7, 8, 8, 5, 8, 9, 7, -7, -14, -11, -4, 0, 1, 5, 4, 4, 7, 5, 5, 2, 3, 5, 0, 2, 5, 1, 1, 3, 3, 2, 2, 6, 3, 4, 6, 4, 4, 8, 12, 5, 4, 1, 0, 4, 3, 0, 0, 2, 2, 1, -4, -5, -8, -9, -6, -4, -4, 3, 4, 4, 4, 2, 1, 0, 0, 5, 4, 0, 1, 0, 0, 1, -1, 3, 1, 2, 1, 1, 4, 1, 1, 2, 1, 0, 0, 1, 0, -5, -8, -5, 1, 0, 4, 2, 5, 7, 9, 7, 6, 1, 0, -2, -4, -1, 1, 4, 7, 7, 3, 3, 3, 3, 1, 0, 2, -3, -4, -5, -3, -1, -2, -2, -1, 0, -1, 1, -3, 3, 1, -1, 0, -4, -4, -5, -3, -3, -11, -7, -2, -2, -2, -3, 0, 2, 1, 4, 0, 2, 0, -3, -4, -2, 3, -2, -3, -8, -10, -6, -7, -5, -4, -2, -2, 0, -4, 0, -1, -2, 0, -2, 1, 0, -2, -2, -1, -2, -1, -2, -4, 0, -5, -7, -6, -9, -10, -1, 6, 3, 6, 5, 4, 5, 5, 3, 0, -3, -2, -3, -3, -2, -2, 3, -3, -1, -6, -5, -5, -6, -5, -7, -3, -2, -4, 0, 2, 0, -2, -1, -4, -1, -1, -3, 1, 0, 0, -1, -6, -4, 1, -1, -3, -2, -2, -1, 2, 6, 4, 7, 5, 7, 7, 10, 8, 5, 5, 2, 1, 0, -3, -4, -3, -3, 5, 4, -1, -3, 0, 2, -2, 1, -4, 0, -3, 2, -2, -2, 0, -1, 0, -3, -1, 2, -3, 0, 1, -3, 0, -1, -2, -1, 0, 0, -1, -2, -5, -3, -3, -3, -2, -5, -2, 1, -1, -2, -4, -2, -4, -6, -5, -3, 1, -1, -1, -1, -3, -3, -2, 0, -1, -1, 0, -1, -1, -1, 1, -1, -1, -2, -2, -1, -2, -3, 0, -1, -1, 0, 2, -1, 3, 2, 4, 5, 9, 2, -1, -1, -3, -3, -4, -7, -6, -7, -2, -2, 3, 3, 1, 1, 1, 6, -1, -3, -3, -3, -3, -4, -3, -1, -2, -1,
-//};
-
-/* Base address for the AXI DMA */
-#define DMA_DEV_ID XPAR_AXIDMA_0_DEVICE_ID
-
-/* AXI DMA instance */
-XAxiDma axi_dma;
-XAxiDma_Config *axi_dma_cfg;
-
-/* Set Heap Size in ldscript.ld to 0x1000000 (16MB) */
-uint8_t tx_buffer_ptr[INPUT_N_FEATURES]; //(uint8_t*)malloc(INPUT_N_FEATURES * sizeof(uint8_t));
-uint8_t rx_buffer_ptr[OUTPUT_N_FEATURES];//(uint8_t*)malloc(OUTPUT_N_FEATURES  * sizeof(uint8_t));
 
 void start_64b_counter() {
     XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_0);
@@ -98,6 +86,37 @@ u64 get_64b_counter_value() {
 double get_elapsed_time(u64 clks) {
     return clks * 1000000.0/XPAR_AXI_TIMER_MCU_CLOCK_FREQ_HZ;
 }
+#elif EE_CFG_ENERGY_MODE == 1
+//GPIO Config for Timestamp
+#include "xgpio.h"
+#define PIN 0x01
+#define GPIO_PMOD_PIN_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+
+#define set_pin_high(InstancePtr, Mask) \
+        XGpio_DiscreteWrite(InstancePtr, 1, Mask)
+
+#define set_pin_low(InstancePtr, Mask) \
+        XGpio_DiscreteClear(InstancePtr, 1, Mask)
+XGpio Gpio;
+int gpio_status;
+#endif
+
+//unsigned char src_data[490] = {
+//-81, -80, -81, -82, -83, -85, -85, -87, -92, -89, -87, -89, -89, -83, -83, -87, -56, -42, -35, -34, -25, -7, 32, 48, 36, 39, 31, 23, 14, 9, 5, -3, -11, -14, -13, -18, -28, -37, -42, -32, -22, -33, -44, -56, -64, -74, -72, -80, -80, 9, 10, 9, 5, 6, 8, 5, 6, 7, 6, 5, 5, 8, 8, 9, 7, 27, 32, 33, 33, 30, 22, 15, 14, 12, 14, 13, 16, 18, 18, 20, 25, 26, 33, 34, 34, 31, 29, 22, 17, 4, 5, 9, 12, 10, 7, 9, 7, 7, 6, 6, 7, 4, 4, 5, 5, 4, 5, 6, 7, 6, 8, 5, 12, 5, 19, 19, 18, 16, 14, 12, 5, -4, -1, 1, 1, 2, 2, 3, 2, 4, 7, 8, 8, 5, 8, 9, 7, -7, -14, -11, -4, 0, 1, 5, 4, 4, 7, 5, 5, 2, 3, 5, 0, 2, 5, 1, 1, 3, 3, 2, 2, 6, 3, 4, 6, 4, 4, 8, 12, 5, 4, 1, 0, 4, 3, 0, 0, 2, 2, 1, -4, -5, -8, -9, -6, -4, -4, 3, 4, 4, 4, 2, 1, 0, 0, 5, 4, 0, 1, 0, 0, 1, -1, 3, 1, 2, 1, 1, 4, 1, 1, 2, 1, 0, 0, 1, 0, -5, -8, -5, 1, 0, 4, 2, 5, 7, 9, 7, 6, 1, 0, -2, -4, -1, 1, 4, 7, 7, 3, 3, 3, 3, 1, 0, 2, -3, -4, -5, -3, -1, -2, -2, -1, 0, -1, 1, -3, 3, 1, -1, 0, -4, -4, -5, -3, -3, -11, -7, -2, -2, -2, -3, 0, 2, 1, 4, 0, 2, 0, -3, -4, -2, 3, -2, -3, -8, -10, -6, -7, -5, -4, -2, -2, 0, -4, 0, -1, -2, 0, -2, 1, 0, -2, -2, -1, -2, -1, -2, -4, 0, -5, -7, -6, -9, -10, -1, 6, 3, 6, 5, 4, 5, 5, 3, 0, -3, -2, -3, -3, -2, -2, 3, -3, -1, -6, -5, -5, -6, -5, -7, -3, -2, -4, 0, 2, 0, -2, -1, -4, -1, -1, -3, 1, 0, 0, -1, -6, -4, 1, -1, -3, -2, -2, -1, 2, 6, 4, 7, 5, 7, 7, 10, 8, 5, 5, 2, 1, 0, -3, -4, -3, -3, 5, 4, -1, -3, 0, 2, -2, 1, -4, 0, -3, 2, -2, -2, 0, -1, 0, -3, -1, 2, -3, 0, 1, -3, 0, -1, -2, -1, 0, 0, -1, -2, -5, -3, -3, -3, -2, -5, -2, 1, -1, -2, -4, -2, -4, -6, -5, -3, 1, -1, -1, -1, -3, -3, -2, 0, -1, -1, 0, -1, -1, -1, 1, -1, -1, -2, -2, -1, -2, -3, 0, -1, -1, 0, 2, -1, 3, 2, 4, 5, 9, 2, -1, -1, -3, -3, -4, -7, -6, -7, -2, -2, 3, 3, 1, 1, 1, 6, -1, -3, -3, -3, -3, -4, -3, -1, -2, -1,
+//};
+
+/* Base address for the AXI DMA */
+#define DMA_DEV_ID XPAR_AXIDMA_0_DEVICE_ID
+
+/* AXI DMA instance */
+XAxiDma axi_dma;
+XAxiDma_Config *axi_dma_cfg;
+
+/* Set Heap Size in ldscript.ld to 0x1000000 (16MB) */
+uint8_t tx_buffer_ptr[INPUT_N_FEATURES]; //(uint8_t*)malloc(INPUT_N_FEATURES * sizeof(uint8_t));
+uint8_t rx_buffer_ptr[OUTPUT_N_FEATURES];//(uint8_t*)malloc(OUTPUT_N_FEATURES  * sizeof(uint8_t));
+
+
 
 
 
@@ -181,8 +200,8 @@ void th_results(void)
     float *results  = NULL;
     size_t nresults = 0;
     /* USER CODE 1 BEGIN */
-    float res_arr[12] = {0,0,0,0,0,0,0,0,0,0,0,0};
-    nresults = 12;
+    float res_arr[10] = {0,0,0,0,0,0,0,0,0,0};
+    nresults = 10;
     results = res_arr;
     int maxclass = rx_buffer_ptr[0];
 
@@ -257,6 +276,10 @@ void th_final_initialize(void) {
 
 	//printf("src: %p, dst %p \n",src_mem,dst_mem);
 	//th_printf("INFO: Init Finished!\r\n");
+	//print out this info on startup so the power init actually works
+	th_printf(EE_MSG_NAME, EE_DEVICE_NAME, TH_VENDOR_NAME_STRING);
+    th_printf("m-profile-[%s]\r\n", EE_FW_VERSION);
+    th_printf("m-model-[%s]\r\n", TH_MODEL_VERSION);
 }
 
 void th_pre() {};
