@@ -9,11 +9,8 @@ help:
 .PHONY: --setup
 
 sdk: --setup
-	rm -f $(DESIGN)_standalone/src/helloworld.c
-	cd  $(DESIGN)_standalone/src && ln -s ../../common/main.c main.c
-	cd  $(DESIGN)_standalone/src && ln -s ../../common/data.h data.h
+	cd  $(DESIGN)_standalone/src && cp -r ../../common/harness/* .
 .PHONY: sdk
-
 gui:
 	xsdk --workspace . &
 .PHONY: gui
