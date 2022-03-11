@@ -139,7 +139,6 @@ void th_load_tensor() {
 	int cutoff = 640; //128 * 2 frames
 	slices = 2; // 4 or 2, depending on AD05 vs AD06
 	bins = 32;
-	//this shit is haunted, but more likely is that my brain can't parse C code after starting at it for this long. this doesn't seem like it should work at first glance, but it does (somehow)
 	float flt_buffer[cutoff*floatsize] = {0}; // load 4/5 total frames (128 Features [32b floats] x 2/5 Frames = 2048b vs 2560b) Only pulling from first 2 frames (can modify?)
 	for (int i = 0; i < cutoff*floatsize; i+=floatsize){
 		memcpy(&data_flt,&gp_buff[i],(int)floatsize); //TODO

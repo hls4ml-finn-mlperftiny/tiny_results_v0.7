@@ -28,56 +28,15 @@ in th_results is copied from the original in EEMBC.
 #include "api/internally_implemented.h"
 //#include "internally_implemented.cpp"
 
-
-#if EE_CFG_ENERGY_MODE == 0
-/* Profiling utilities */
-#include "xtmrctr.h"     /* timer, Xilinx IP Timer Counter */
-static XTmrCtr TimerCounterInst;
-#define TMRCTR_DEVICE_ID    XPAR_TMRCTR_0_DEVICE_ID
-#define TIMER_CNTR_0        0
-#define TIMER_CNTR_1        1
-
-double th_timestamp_counts;
-u64 th_timer_timestamp;
-u64 th_timer_start;
-u64 th_calibration_time;
-
-void start_64b_counter() {
-    XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_0);
-    XTmrCtr_Start(&TimerCounterInst, TIMER_CNTR_1);
-}
-
-void stop_64b_counter() {
-    XTmrCtr_Stop(&TimerCounterInst, TIMER_CNTR_0);
-    XTmrCtr_Stop(&TimerCounterInst, TIMER_CNTR_1);
-}
-
-u64 get_64b_counter_value() {
-    //printf("bytes %u\n\r", sizeof(u64));
-    u64 lo_counter = XTmrCtr_GetValue(&TimerCounterInst, TIMER_CNTR_0);
-    u64 hi_counter = XTmrCtr_GetValue(&TimerCounterInst, TIMER_CNTR_1);
-    u64 counter = (hi_counter << 32) | lo_counter;
-    //printf("INFO: hi = %lu, lo = %lu, total = %lu\n\r", hi_counter, lo_counter, counter);
-    return counter;
-}
-
-double get_elapsed_time(u64 clks) {
-    return clks * 1000000.0/XPAR_AXI_TIMER_MCU_CLOCK_FREQ_HZ;
-}
-#elif EE_CFG_ENERGY_MODE == 1
+#if EE_CFG_ENERGY_MODE == 1
 //GPIO Config for Timestamp
-#include "xgpio.h"
-#define PIN 0x01
-#define GPIO_PMOD_PIN_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
-
-#define set_pin_high(InstancePtr, Mask) \
-        XGpio_DiscreteWrite(InstancePtr, 1, Mask)
-
-#define set_pin_low(InstancePtr, Mask) \
-        XGpio_DiscreteClear(InstancePtr, 1, Mask)
-XGpio Gpio;
-int gpio_status;
+XGpioPs Gpio;
+XGpioPs_Config *GPIOConfigPtr;
+int GPIO_Status;
 #endif
+
+//#define UART_DEVICE_ID  XPAR_XUARTPS_0_DEVICE_ID
+XUartPs Uart_Ps;		/* The instance of the UART Driver */
 
 
 extern uint8_t  *gp_buff[MAX_DB_INPUT_SIZE];
@@ -97,14 +56,26 @@ uint32_t dst_mem_size;
 
 uint8_t  floatsize = sizeof(float);
 
+XTime th_timer_start;
+XTime th_timer_timestamp;
+
+double th_calibration_time;
+double th_timestamp_counts;
+
 uint8_t slices;
 uint8_t bins;
+
+
+double get_elapsed_time(XTime start, XTime stop)
+{
+    return 1.0 * (stop - start) / (COUNTS_PER_SECOND);
+}
 
 /* accelerator initialization routine */
 void init_accelerators()
 {
     //printf("INFO: Initializing accelerator\n\r");
-    do_anomaly_detector_cfg = XMyproject_axi_LookupConfig(XPAR_MYPROJECT_AXI_DEVICE_ID);//XPAR_ANOMALY_DETECTOR_AXI_DEVICE_ID);
+    do_anomaly_detector_cfg = XMyproject_axi_LookupConfig(XPAR_MYPROJECT_AXI_0_DEVICE_ID);//XPAR_ANOMALY_DETECTOR_AXI_DEVICE_ID);
     if (do_anomaly_detector_cfg)
     {
         int status  = XMyproject_axi_CfgInitialize(&do_anomaly_detector, do_anomaly_detector_cfg);
@@ -158,7 +129,7 @@ void th_load_tensor() {
 	//for (int i = 0; i < src_mem_size; i++) {//Init DST mem with 0's
 	//    src_mem[i] = 0;
    // }
-	for (uint32_t i = 0; i < dst_mem_size; i++) {//Init DST mem with 0's
+	for (int i = 0; i < dst_mem_size; i++) {//Init DST mem with 0's
 		dst_mem[i] = 0;
 	}
     //malloc_stats();
@@ -263,9 +234,6 @@ void th_final_initialize(void) {
 	//dst_mem = malloc(dst_mem_size);
 	//printf("src: %p, dst %p \n",src_mem,dst_mem);
 	//th_printf("INFO: Init Finished!\r\n");
-	th_printf(EE_MSG_NAME, EE_DEVICE_NAME, TH_VENDOR_NAME_STRING);
-    th_printf("m-profile-[%s]\r\n", EE_FW_VERSION);
-    th_printf("m-model-[%s]\r\n", TH_MODEL_VERSION);
 }
 
 void th_pre() {}
@@ -313,39 +281,68 @@ void th_printf(const char *p_fmt, ...) {
 char th_getchar() { return getchar(); }
 
 void th_serialport_initialize(void) {
+	u16 DeviceId = UART_DEVICE_ID;
+	int UartStatus;
 #if EE_CFG_ENERGY_MODE == 1
 /* In energy mode, we talk to the DUT through the IO Manager at 9600 baud */
-	//Need to re-build firmware to get 9600b sadly ):
+	//FW Needs to be recompiled for lower speed? #TODO
+	XUartPs_Config *Config;
+
+		/*
+		 * Initialize the UART driver so that it's ready to use
+		 * Look up the configuration in the config table and then initialize it.
+		 */
+		Config = XUartPs_LookupConfig(DeviceId);
+		if (NULL == Config) {
+		}
+
+		UartStatus = XUartPs_CfgInitialize(&Uart_Ps, Config, Config->BaseAddress);
+		if (UartStatus != XST_SUCCESS) {
+		}
+
+		XUartPs_SetBaudRate(&Uart_Ps, 9600);
+		//printf("Info: Baudrate 9600b");
 #else
 /* In performance mode, we talk directly to the DUT at 115200 baud */
-		//Need to re-build firmware to get 115200b sadly ):
+		XUartPs_Config *Config;
+
 			/*
 			 * Initialize the UART driver so that it's ready to use
 			 * Look up the configuration in the config table and then initialize it.
 			 */
+			Config = XUartPs_LookupConfig(DeviceId);
+			if (NULL == Config) {
+			}
+
+			UartStatus = XUartPs_CfgInitialize(&Uart_Ps, Config, Config->BaseAddress);
+			if (UartStatus != XST_SUCCESS) {
+			}
+
+			XUartPs_SetBaudRate(&Uart_Ps, 115200);
+			//printf("Info: Baudrate 115200");
 #endif
 }
 
 void th_timestamp(void) {
 #if EE_CFG_ENERGY_MODE == 1
-	/* USER CODE 1 BEGIN */
-	/* Step 1. Pull pin low */
-		set_pin_low(&Gpio, PIN);
-	/* Step 2. Hold low for at least 1us */
-		usleep(10); //Holding for 10us, unsure of max speed of GPIOs, should be fine?
-		//continue; //Not worrying about for performance mode
-	/* Step 3. Release driver */
-		set_pin_high(&Gpio, PIN);
-	/* USER CODE 1 END */
+/* USER CODE 1 BEGIN */
+/* Step 1. Pull pin low */
+	XGpioPs_WritePin(&Gpio, TIMER_PIN, 0x0);
+/* Step 2. Hold low for at least 1us */
+	usleep(10); //Holding for 10us, unsure of max speed of GPIOs, should be fine?
+	//continue; //Not worrying about for performance mode
+/* Step 3. Release driver */
+	XGpioPs_WritePin(&Gpio, TIMER_PIN, 0x1);
+/* USER CODE 1 END */
 #else
     unsigned long microSeconds = 0ul;
     /* USER CODE 2 BEGIN */
-    th_timer_timestamp = get_64b_counter_value();
-	th_timestamp_counts = get_elapsed_time(th_timer_timestamp);
-	//microSeconds = th_timestamp_counts/th_calibration_time;
+	XTime_GetTime(&th_timer_timestamp);
+	th_timestamp_counts = get_elapsed_time(th_timer_start, th_timer_timestamp);
+	microSeconds = th_timestamp_counts/th_calibration_time;
     /* USER CODE 2 END */
     /* This message must NOT be changed. */
-    th_printf(EE_MSG_TIMESTAMP, th_timestamp_counts);
+    th_printf(EE_MSG_TIMESTAMP, microSeconds);
 #endif
 }
 
@@ -353,36 +350,23 @@ void th_timestamp_initialize(void) {
     /* USER CODE 1 BEGIN */
 	//GPIO Initilization
 #if EE_CFG_ENERGY_MODE == 1
-	gpio_status = XGpio_Initialize(&Gpio, GPIO_PMOD_PIN_DEVICE_ID);
-		if (gpio_status != XST_SUCCESS) {
-			xil_printf("GPIO Initialization Failed\r\n");
-		}
+	GPIOConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+	GPIO_Status = XGpioPs_CfgInitialize(&Gpio, GPIOConfigPtr, GPIOConfigPtr ->BaseAddr);
 
-	set_pin_high(&Gpio, PIN);
-	//XGpioPs_SetDirectionPin(&Gpio, PIN, 1);
-	//XGpioPs_SetOutputEnablePin(&Gpio, PIN, 1);
-	//XGpioPs_WritePin(&Gpio, TIMER_PIN, 0x1); //Make sure we're starting High, as device triggered on low
+	if (GPIO_Status != XST_SUCCESS) {
+	}
+
+	XGpioPs_SetDirectionPin(&Gpio, TIMER_PIN, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, TIMER_PIN, 1);
+	XGpioPs_WritePin(&Gpio, TIMER_PIN, 0x1); //Make sure we're starting High, as device triggered on low
 
 #else
-    /* Timer Counter */
-    int status = XTmrCtr_Initialize(&TimerCounterInst, TMRCTR_DEVICE_ID);
-    if (status != XST_SUCCESS){
-        th_printf("ERROR: Timer counter initialization failed \r\n");
-        //return status;
-    }
-
-    XTmrCtr_SetOptions(&TimerCounterInst, TIMER_CNTR_0,
-                XTC_AUTO_RELOAD_OPTION |
-                XTC_CASCADE_MODE_OPTION);
-
-    th_printf("INFO: Timer counter initialized\r\n");
-
-    /* Calibration */
-    start_64b_counter();
-    //sleep(1);
-    th_timer_start = get_64b_counter_value();
-    //th_printf("INFO: Time calibration for one second (%lf sec, %llu clk)\r\n", get_elapsed_time(calibration_time), calibration_time);
-
+	XTime th_timer_stop;
+	XTime_GetTime(&th_timer_start);
+	usleep(1000); //sleep for 1000us to calibrate timer
+	XTime_GetTime(&th_timer_stop);
+	th_calibration_time = get_elapsed_time(th_timer_start, th_timer_stop)/1000;
+    /* USER CODE 1 END */
 #endif
     /* This message must NOT be changed. */
     th_printf(EE_MSG_TIMESTAMP_MODE);
