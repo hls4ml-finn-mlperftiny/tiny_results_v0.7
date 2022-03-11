@@ -16,7 +16,7 @@ By the collaboration between the `hls4ml` and `FINN` teams.
   * Jules Muhizi, Fermilab/Harvard
   * Ryan Kastner, Jason Liang, Andy Meza, Tai Nguyen, Rushil Roy, Olivia Weng, UC San Diego
   * Hendrik Borras, Ruprecht-Karls-Universität Heidelberg
-  * Aidan Yokuda, University of Washington
+  * Scott Hauck, Shih-Chieh Hsu, Aidan Yokuda, University of Washington
 
 ## Hardware
 * The first board is a TUL PYNQ-Z2 based on Xilinx Zynq SoC (See https://www.tul.com.tw/productspynq-z2.html for more information).
