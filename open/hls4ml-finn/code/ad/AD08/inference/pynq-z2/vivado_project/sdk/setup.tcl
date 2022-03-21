@@ -6,6 +6,7 @@ if { $::argc == 1 } {
     set myproject [lindex $::argv 0]
     createhw -name ${myproject}\_platform -hwspec ../hdf/${myproject}\_wrapper.hdf
     createapp -name ${myproject}\_standalone -lang c++ -app {Empty Application} -proc ps7_cortexa9_0 -hwproject ${myproject}\_platform -os standalone
+	createapp -name ${myproject}\_fsbl -app {Zynq FSBL} -proc ps7_cortexa9_0 -hwproject $accname\_platform -os standalone
     configapp -app ${myproject}\_standalone build-config release
     configapp -app ${myproject}\_standalone -add linker-misc {-Wl,--defsym=_HEAP_SIZE=0x100000}
     configapp -app ${myproject}\_standalone -add linker-misc {-Wl,--defsym=_STACK_SIZE=0x100000}

@@ -14,6 +14,6 @@
 #define __TH_CONFIG_H
 
 #define EE_CFG_SELFHOSTED  0
-#define EE_CFG_ENERGY_MODE 1
+#define EE_CFG_ENERGY_MODE 0
 
 #endif
