@@ -38,7 +38,8 @@ gui:
 clean:
 	rm -rf $(ACCNAME)*_bsp
 	rm -rf $(ACCNAME)*_platform
-	rm -rf $(PROJECT)*_standalone
+	rm -rf $(ACCNAME)*_standalone
+	rm -rf $(ACCNAME)*_bootloader
 	rm -rf RemoteSystemsTempFiles	
 	rm -f *.jou
 	rm -f *.log

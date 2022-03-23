@@ -1,5 +1,5 @@
 # Boot from Flash
-
+0. Under the `<project>_standalone` project, in `submitter_implemented.h`, make sure to set `#define EE_CFG_ENERGY_MODE` to `1`. This enables the configuation changes required to run energy benchmarks
 1. In the SDK, select  `<project>_bootloader` in _Project Explorer_
 2. Click: `Xilinx >> Create Boot Image`
 3. Click: `Add`

@@ -33,11 +33,11 @@ For the energy Setup, some minor soldering needs to be done. Specifically:
 
 This soldering job relativley easy, and consists of soldering the extra tall header pins onto the BSS138 Breakout board. The correct orientation is so that the gold plated ends of the header pins are sticking out of the top of the BSS138 Breakout board, with the plastic spacer underneath the board itself, so that when plugged into a breadboard it sits on the plastic spacer 
 
-![](/img/img_20210607_140451.jpg)
+![](img/img_20210607_140451.jpg)
 
 BSS138 Breakout Board with pins soldered inserted into breadboard
 
-![](/img/img_20210607_133515.jpg)
+![](img/img_20210607_133515.jpg)
 
 BSS138 Breakout Board with Extra Tall header pins in correct orientation
 
@@ -47,7 +47,7 @@ To setup for an Energy Consumption Benchmark:
 
 1.  Connect everything according to this wiring diagram where the DUT is the Arty A7-100T (All devices powered off)
 
-![](/img/hookup-js110-arty.png)
+![](img/hookup-js110-arty.png)
 
 MLPerf Tiny V0.7 Energy Benchmark Wiring Diagram for Arty A7-100T
 
@@ -66,18 +66,18 @@ MLPerf Tiny V0.7 Energy Benchmark Wiring Diagram for Arty A7-100T
 
 Additional photos of the actual setup have been included below for reference (if there is any question between these and the diagram, follow the wiring diagram above)
 
-![](/img/full_energy_setup_arty.jpg)
+![](img/full_energy_setup_arty.jpg)
 
 MLPerf Tiny V0.7 Energy Benchmark Physical Setup mirroring the above wiring diagram
 
-![](/img/arty_tinymlpower_wiring.jpg)
+![](img/arty_tinymlpower_wiring.jpg)
 
 MLPerf Tiny V0.7 Energy Benchmark wiring for Arty A7-100T
 
-![](/img/levelshifter_tinymlpower_wiring.png)
+![](img/levelshifter_tinymlpower_wiring.png)
 
 MLPerf Tiny V0.7 Energy Benchmark wiring for Level Shifter
 
-![](/img/arduino_tinymlpower_wiring.png)
+![](img/arduino_tinymlpower_wiring.png)
 
 MLPerf Tiny V0.7 Energy Benchmark wiring for Arduino UNO ("IO Manager")

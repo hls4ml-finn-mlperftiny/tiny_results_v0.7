@@ -21,7 +21,8 @@ gui:
 clean:
 	rm -rf $(ACCNAME)*_bsp
 	rm -rf $(ACCNAME)*_platform
-	rm -rf $(PROJECT)*_standalone
+	rm -rf $(ACCNAME)*_standalone
+	rm -rf $(ACCNAME)*_fsbl
 	rm -rf RemoteSystemsTempFiles
 	rm -rf SDK.log
 	rm -rf webtalk

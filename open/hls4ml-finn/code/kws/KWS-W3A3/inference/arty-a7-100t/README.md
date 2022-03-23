@@ -68,26 +68,26 @@ If you're intending to run **energy (power consumption)** benchmarks, please ref
 0. If you haven't already, download and open "EEMBC EnergyRunner Framework x.x.x" ("EEMBC EnergyRunner Framework 3.0.10" at time of this release)
 1. Mount the Device by clicking the "Mount?" toggle in the devices list
 
-	![](/img/mount_dut1a.png)
+	![](img/mount_dut1a.png)
 
 2. Once mounted, Under "Benchmarks and Test Scripts", select "ML Performance x.x.x " ("ML Performance 1.0.1" at the time of this release)
 
-	![](/img/mount_device2.png)
+	![](img/mount_device2.png)
 
 3. If running **latency (performance)** benchmarks, enter the number of inferences you to run (official runs require at least 10s of runtime or 10 inferences, the number will vary depending on model/device) in the "Inferene Iterations" of the "Setup" portion. ("Warmup Iterations" can be left at 1)
 
-	![](/img/setup_test1.png)
+	![](img/setup_test1.png)
 
 4. Press the "Initalize" to initalize the EEMBC Runner with the appropriate benchmark info, you should see some blue highlighted output in the console and some of the runner's fields populated with info about the current model on the board
 
-	![](/img/init_runner2.png)
-	![](/img/init_runner1.png)
+	![](img/init_runner2.png)
+	![](img/init_runner1.png)
 
 	4a. **IMPORTANT NOTE!** Due to a initalization/reset issue with the internal timer and the soft microblaze CPU core on the Arty, the test harness **_MUST_** be relaunched via the harness in order to have proper timestamps (and therefor latency results) during the test. This shouldn't impact performance, nor does it impact Energy benchmarks since those are timed via an external source. 
-		![](/img/init_runner1.png)
+		![](img/init_runner1.png)
 5. If running the **latency (performance)** benchmark, select the "Median Performance" radio button, otherwise if running the **accuracy**  select the "Accuracy" Radio button, then press "Run" to start the benchmark
 
-	![](/img/test_selection.png)
+	![](img/test_selection.png)
 
 6. Once completed, the results of the benchmark will be printed out to the console, along with relevant logs (results included) being saved to the `~/eembc/runner/sessions` in a directory named the timestamp of when the benchmark completes
 
@@ -99,22 +99,22 @@ If you're intending to run **energy (power consumption)** benchmarks, please ref
 2. Make sure you've connected all required devices as described in the [Arty Energy Setup Readme](arty_energy_setup.md)
 1. Mount the iomanager (Arudino Uno) and energy monitor (Joulescope) in the energy runner
 
-	![](/img/run_power1.png)
+	![](img/run_power1.png)
 
 2. Once mounted, Under "Benchmarks and Test Scripts", select "ML Energy x.x.x " ("ML Performance 1.0.1" at the time of this release)
 
-	![](/img/run_power2.png)
+	![](img/run_power2.png)
 	
 3. **_Make sure the power supply voltage is set to 7 Volts!_**, then press initalize to initalize the runner with test info. _**This will take up to 25 seconds!**_ During this time, the Arty will briefly power on, send a message via the iomanager, then power back off. 
 
-	![](/img/run_power_init.png)
+	![](img/run_power_init.png)
 
 5. If initilization is successful, you will see information about the loaded model in the device. Enter the number of inferences you to run (official runs require at least 10s of runtime or 10 inferences, the number will vary depending on model/device) in the "Inferene Iterations" of the "Setup" portion. ("Warmup Iterations" can be left at 1)
 
-	![](/img/run_power3.png)
+	![](img/run_power3.png)
 
 6. Select the "Median Energy" radio button, then press "Run" to start the benchmark
 
-	![](/img/run_power4.png)
+	![](img/run_power4.png)
 
 6. Once completed, the results of the benchmark will be printed out to the console, with a plot of energy usage over the duration of the benchmark displayed below the console.  along with relevant logs (results included) being saved to the `~/eembc/runner/sessions` in a directory named the timestamp of when the benchmark completes

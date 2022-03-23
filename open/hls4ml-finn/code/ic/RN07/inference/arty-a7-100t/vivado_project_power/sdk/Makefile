@@ -20,6 +20,7 @@ clean:
 	rm -rf $(DESIGN)_platform
 	rm -rf $(DESIGN)_standalone
 	rm -rf $(DESIGN)_standalone_bsp
+	rm -rf $(DESIGN)*_bootloader
 	rm -rf RemoteSystemsTempFiles
 	rm -rf .Xil
 	rm -rf .metadata

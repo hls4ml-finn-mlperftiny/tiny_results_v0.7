@@ -35,7 +35,7 @@ A 1x2 set of standard, 0.10" pitch header pins need to be soldered onto J13 to a
   
 Note that if you need standard 0.10" pitch header pins, a set comes with the BSS138 breakout board that aren't needed for that board (we use the extra tall headers instead, more detail below). 
 
-![](/img/pynq-z2-large_j13_75.png)
+![](img/pynq-z2-large_j13_75.png)
 
 Pynq-Z2 Board with Header J13 Circled
 
@@ -45,11 +45,11 @@ J13 is unpopulated from the factory, but the holes are filled with solder. This 
 
 This soldering job is comparatively easier, and consists of soldering the extra tall header pins onto the BSS138 Breakout board. The correct orientation is so that the gold plated ends of the header pins are sticking out of the top of the BSS138 Breakout board, with the plastic spacer underneath the board itself, so that when plugged into a breadboard it sits on the plastic spacer 
 
-![](/img/img_20210607_140451.jpg)
+![](img/img_20210607_140451.jpg)
 
 BSS138 Breakout Board with pins soldered inserted into breadboard
 
-![](/img/img_20210607_133515.jpg)
+![](img/img_20210607_133515.jpg)
 
 BSS138 Breakout Board with Extra Tall header pins in correct orientation
 
@@ -59,7 +59,7 @@ To setup for an Energy Consumption Benchmark:
 
 1.  Connect everything according to this wiring diagram where the DUT is the Pynq-Z2 (All devices powered off)
 
-![](/img/hookup-js110-pynq.png)
+![](img/hookup-js110-pynq.png)
 
 MLPerf Tiny V0.7 Energy Benchmark Wiring Diagram for Pynq-Z2
 
@@ -82,18 +82,18 @@ MLPerf Tiny V0.7 Energy Benchmark Wiring Diagram for Pynq-Z2
 
 Additional photos of the actual setup have been included below for reference (if there is any question between these and the diagram, follow the wiring diagram above)
 
-![](/img/full_energy_setup_pynq.jpg)
+![](img/full_energy_setup_pynq.jpg)
 
 MLPerf Tiny V0.7 Energy Benchmark Physical Setup mirroring the above wiring diagram
 
-![](/img/pynqz2_tinymlpower_wiring.png)
+![](img/pynqz2_tinymlpower_wiring.png)
 
 MLPerf Tiny V0.7 Energy Benchmark wiring for Pynq-Z2
 
-![](/img/levelshifter_tinymlpower_wiring.png)
+![](img/levelshifter_tinymlpower_wiring.png)
 
 MLPerf Tiny V0.7 Energy Benchmark wiring for Level Shifter
 
-![](/img/arduino_tinymlpower_wiring.png)
+![](img/arduino_tinymlpower_wiring.png)
 
 MLPerf Tiny V0.7 Energy Benchmark wiring for Arduino UNO ("IO Manager")
