@@ -21,10 +21,12 @@ clean:
 	rm -rf $(DESIGN)_standalone
 	rm -rf $(DESIGN)_standalone_bsp
 	rm -rf $(DESIGN)*_fsbl
+	rm -rf $(DESIGN)*_fsbl_bsp
 	rm -rf RemoteSystemsTempFiles
 	rm -rf .Xil
 	rm -rf .metadata
 	rm -f *.log
+	rm -rf .sdk
 .PHONY: clean
 
 ultraclean: clean

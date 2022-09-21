@@ -21,7 +21,7 @@
         cmd: 'dut timestamp'
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\emu_s_002009.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/emu_s_002009.bin"',
         ms: 49152
     },
     {
@@ -30,7 +30,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\taxi_s_001241.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/taxi_s_001241.bin"',
         ms: 49152
     },
     {
@@ -39,7 +39,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\accentor_s_001031.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/accentor_s_001031.bin"',
         ms: 49152
     },
     {
@@ -48,7 +48,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\mongrel_s_000686.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/mongrel_s_000686.bin"',
         ms: 49152
     },
     {
@@ -57,7 +57,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_bomber_s_002204.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_bomber_s_002204.bin"',
         ms: 49152
     },
     {
@@ -66,7 +66,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\dama_dama_s_000007.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/dama_dama_s_000007.bin"',
         ms: 49152
     },
     {
@@ -75,7 +75,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\blenheim_spaniel_s_000355.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/blenheim_spaniel_s_000355.bin"',
         ms: 49152
     },
     {
@@ -84,7 +84,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\muntjac_s_001495.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/muntjac_s_001495.bin"',
         ms: 49152
     },
     {
@@ -93,7 +93,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\station_wagon_s_002096.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/station_wagon_s_002096.bin"',
         ms: 49152
     },
     {
@@ -102,7 +102,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\alley_cat_s_001902.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/alley_cat_s_001902.bin"',
         ms: 49152
     },
     {
@@ -111,7 +111,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fighter_aircraft_s_001537.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fighter_aircraft_s_001537.bin"',
         ms: 49152
     },
     {
@@ -120,7 +120,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\puppy_s_000654.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/puppy_s_000654.bin"',
         ms: 49152
     },
     {
@@ -129,7 +129,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tennessee_walker_s_000353.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tennessee_walker_s_000353.bin"',
         ms: 49152
     },
     {
@@ -138,7 +138,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\american_elk_s_001535.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/american_elk_s_001535.bin"',
         ms: 49152
     },
     {
@@ -147,7 +147,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\trailer_truck_s_000002.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/trailer_truck_s_000002.bin"',
         ms: 49152
     },
     {
@@ -156,7 +156,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tomcat_s_000123.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tomcat_s_000123.bin"',
         ms: 49152
     },
     {
@@ -165,7 +165,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\ostrich_s_000571.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/ostrich_s_000571.bin"',
         ms: 49152
     },
     {
@@ -174,7 +174,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pekingese_s_001557.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pekingese_s_001557.bin"',
         ms: 49152
     },
     {
@@ -183,7 +183,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\rana_cascadae_s_000003.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/rana_cascadae_s_000003.bin"',
         ms: 49152
     },
     {
@@ -192,7 +192,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\wapiti_s_001247.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/wapiti_s_001247.bin"',
         ms: 49152
     },
     {
@@ -201,7 +201,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cervus_elaphus_s_000997.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cervus_elaphus_s_000997.bin"',
         ms: 49152
     },
     {
@@ -210,7 +210,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\convertible_s_000457.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/convertible_s_000457.bin"',
         ms: 49152
     },
     {
@@ -219,7 +219,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\convertible_s_000890.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/convertible_s_000890.bin"',
         ms: 49152
     },
     {
@@ -228,7 +228,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\merchant_ship_s_001766.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/merchant_ship_s_001766.bin"',
         ms: 49152
     },
     {
@@ -237,7 +237,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\king_charles_spaniel_s_000003.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/king_charles_spaniel_s_000003.bin"',
         ms: 49152
     },
     {
@@ -246,7 +246,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tipper_truck_s_001753.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tipper_truck_s_001753.bin"',
         ms: 49152
     },
     {
@@ -255,7 +255,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\passenger_ship_s_002208.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/passenger_ship_s_002208.bin"',
         ms: 49152
     },
     {
@@ -264,7 +264,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cervus_elaphus_s_001039.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cervus_elaphus_s_001039.bin"',
         ms: 49152
     },
     {
@@ -273,7 +273,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\arabian_s_001271.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/arabian_s_001271.bin"',
         ms: 49152
     },
     {
@@ -282,7 +282,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\arabian_s_002049.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/arabian_s_002049.bin"',
         ms: 49152
     },
     {
@@ -291,7 +291,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cock_s_000054.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cock_s_000054.bin"',
         ms: 49152
     },
     {
@@ -300,7 +300,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\muntjac_s_000528.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/muntjac_s_000528.bin"',
         ms: 49152
     },
     {
@@ -309,7 +309,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\police_cruiser_s_000784.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/police_cruiser_s_000784.bin"',
         ms: 49152
     },
     {
@@ -318,7 +318,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bullfrog_s_000013.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bullfrog_s_000013.bin"',
         ms: 49152
     },
     {
@@ -327,7 +327,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\truck_s_001115.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/truck_s_001115.bin"',
         ms: 49152
     },
     {
@@ -336,7 +336,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\rhea_americana_s_000047.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/rhea_americana_s_000047.bin"',
         ms: 49152
     },
     {
@@ -345,7 +345,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\biplane_s_000032.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/biplane_s_000032.bin"',
         ms: 49152
     },
     {
@@ -354,7 +354,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\station_wagon_s_002543.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/station_wagon_s_002543.bin"',
         ms: 49152
     },
     {
@@ -363,7 +363,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stag_s_000985.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stag_s_000985.bin"',
         ms: 49152
     },
     {
@@ -372,7 +372,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\walking_horse_s_001755.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/walking_horse_s_001755.bin"',
         ms: 49152
     },
     {
@@ -381,7 +381,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\freighter_s_001090.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/freighter_s_001090.bin"',
         ms: 49152
     },
     {
@@ -390,7 +390,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\lorry_s_002019.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/lorry_s_002019.bin"',
         ms: 49152
     },
     {
@@ -399,7 +399,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\iceboat_s_000293.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/iceboat_s_000293.bin"',
         ms: 49152
     },
     {
@@ -408,7 +408,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_fighter_s_000397.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_fighter_s_000397.bin"',
         ms: 49152
     },
     {
@@ -417,7 +417,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\rana_temporaria_s_001366.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/rana_temporaria_s_001366.bin"',
         ms: 49152
     },
     {
@@ -426,7 +426,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pekingese_s_002210.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pekingese_s_002210.bin"',
         ms: 49152
     },
     {
@@ -435,7 +435,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\auto_s_001172.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/auto_s_001172.bin"',
         ms: 49152
     },
     {
@@ -444,7 +444,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\sambar_s_000303.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/sambar_s_000303.bin"',
         ms: 49152
     },
     {
@@ -453,7 +453,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bird_s_000558.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bird_s_000558.bin"',
         ms: 49152
     },
     {
@@ -462,7 +462,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stud_mare_s_000978.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stud_mare_s_000978.bin"',
         ms: 49152
     },
     {
@@ -471,7 +471,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\freighter_s_000063.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/freighter_s_000063.bin"',
         ms: 49152
     },
     {
@@ -480,7 +480,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\passenger_ship_s_001728.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/passenger_ship_s_001728.bin"',
         ms: 49152
     },
     {
@@ -489,7 +489,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bufo_bufo_s_000332.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bufo_bufo_s_000332.bin"',
         ms: 49152
     },
     {
@@ -498,7 +498,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\house_cat_s_000190.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/house_cat_s_000190.bin"',
         ms: 49152
     },
     {
@@ -507,7 +507,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\wagon_s_001634.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/wagon_s_001634.bin"',
         ms: 49152
     },
     {
@@ -516,7 +516,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\japanese_spaniel_s_000006.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/japanese_spaniel_s_000006.bin"',
         ms: 49152
     },
     {
@@ -525,7 +525,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\house_cat_s_000385.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/house_cat_s_000385.bin"',
         ms: 49152
     },
     {
@@ -534,7 +534,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\ostrich_s_002220.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/ostrich_s_002220.bin"',
         ms: 49152
     },
     {
@@ -543,7 +543,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tennessee_walker_s_000914.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tennessee_walker_s_000914.bin"',
         ms: 49152
     },
     {
@@ -552,7 +552,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\domestic_dog_s_000447.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/domestic_dog_s_000447.bin"',
         ms: 49152
     },
     {
@@ -561,7 +561,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\japanese_spaniel_s_000025.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/japanese_spaniel_s_000025.bin"',
         ms: 49152
     },
     {
@@ -570,7 +570,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_fighter_s_000807.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_fighter_s_000807.bin"',
         ms: 49152
     },
     {
@@ -579,7 +579,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stud_mare_s_000611.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stud_mare_s_000611.bin"',
         ms: 49152
     },
     {
@@ -588,7 +588,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\crapaud_s_001521.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/crapaud_s_001521.bin"',
         ms: 49152
     },
     {
@@ -597,7 +597,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\arabian_s_001976.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/arabian_s_001976.bin"',
         ms: 49152
     },
     {
@@ -606,7 +606,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\dump_truck_s_000692.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/dump_truck_s_000692.bin"',
         ms: 49152
     },
     {
@@ -615,7 +615,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\truck_s_000064.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/truck_s_000064.bin"',
         ms: 49152
     },
     {
@@ -624,7 +624,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\gelding_s_000561.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/gelding_s_000561.bin"',
         ms: 49152
     },
     {
@@ -633,7 +633,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\rana_temporaria_s_000299.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/rana_temporaria_s_000299.bin"',
         ms: 49152
     },
     {
@@ -642,7 +642,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\barking_frog_s_000042.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/barking_frog_s_000042.bin"',
         ms: 49152
     },
     {
@@ -651,7 +651,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\coupe_s_001831.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/coupe_s_001831.bin"',
         ms: 49152
     },
     {
@@ -660,7 +660,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\domestic_cat_s_001925.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/domestic_cat_s_001925.bin"',
         ms: 49152
     },
     {
@@ -669,7 +669,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\dredger_s_001602.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/dredger_s_001602.bin"',
         ms: 49152
     },
     {
@@ -678,7 +678,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\wagon_s_001104.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/wagon_s_001104.bin"',
         ms: 49152
     },
     {
@@ -687,7 +687,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\appaloosa_s_001590.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/appaloosa_s_001590.bin"',
         ms: 49152
     },
     {
@@ -696,7 +696,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pontoon_s_000606.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pontoon_s_000606.bin"',
         ms: 49152
     },
     {
@@ -705,7 +705,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tabby_s_001714.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tabby_s_001714.bin"',
         ms: 49152
     },
     {
@@ -714,7 +714,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\liberty_ship_s_000312.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/liberty_ship_s_000312.bin"',
         ms: 49152
     },
     {
@@ -723,7 +723,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fawn_s_001630.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fawn_s_001630.bin"',
         ms: 49152
     },
     {
@@ -732,7 +732,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\propeller_plane_s_000183.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/propeller_plane_s_000183.bin"',
         ms: 49152
     },
     {
@@ -741,7 +741,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\domestic_cat_s_001793.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/domestic_cat_s_001793.bin"',
         ms: 49152
     },
     {
@@ -750,7 +750,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\domestic_cat_s_000360.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/domestic_cat_s_000360.bin"',
         ms: 49152
     },
     {
@@ -759,7 +759,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\maltese_dog_s_000318.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/maltese_dog_s_000318.bin"',
         ms: 49152
     },
     {
@@ -768,7 +768,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\mouser_s_000320.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/mouser_s_000320.bin"',
         ms: 49152
     },
     {
@@ -777,7 +777,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\lapdog_s_001872.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/lapdog_s_001872.bin"',
         ms: 49152
     },
     {
@@ -786,7 +786,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cassowary_s_001156.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cassowary_s_001156.bin"',
         ms: 49152
     },
     {
@@ -795,7 +795,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tipper_truck_s_001239.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tipper_truck_s_001239.bin"',
         ms: 49152
     },
     {
@@ -804,7 +804,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\felis_catus_s_000404.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/felis_catus_s_000404.bin"',
         ms: 49152
     },
     {
@@ -813,7 +813,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\estate_car_s_000363.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/estate_car_s_000363.bin"',
         ms: 49152
     },
     {
@@ -822,7 +822,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\broodmare_s_000816.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/broodmare_s_000816.bin"',
         ms: 49152
     },
     {
@@ -831,7 +831,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\dawn_horse_s_001180.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/dawn_horse_s_001180.bin"',
         ms: 49152
     },
     {
@@ -840,7 +840,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cat_s_001955.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cat_s_001955.bin"',
         ms: 49152
     },
     {
@@ -849,7 +849,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pekingese_s_000793.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pekingese_s_000793.bin"',
         ms: 49152
     },
     {
@@ -858,7 +858,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\felis_catus_s_000115.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/felis_catus_s_000115.bin"',
         ms: 49152
     },
     {
@@ -867,7 +867,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\green_frog_s_001434.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/green_frog_s_001434.bin"',
         ms: 49152
     },
     {
@@ -876,7 +876,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\puppy_s_002012.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/puppy_s_002012.bin"',
         ms: 49152
     },
     {
@@ -885,7 +885,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bird_s_000229.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bird_s_000229.bin"',
         ms: 49152
     },
     {
@@ -894,7 +894,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\anthus_pratensis_s_000055.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/anthus_pratensis_s_000055.bin"',
         ms: 49152
     },
     {
@@ -903,7 +903,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\dog_s_000740.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/dog_s_000740.bin"',
         ms: 49152
     },
     {
@@ -912,7 +912,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\passenger_ship_s_001606.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/passenger_ship_s_001606.bin"',
         ms: 49152
     },
     {
@@ -921,7 +921,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\attack_aircraft_s_000571.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/attack_aircraft_s_000571.bin"',
         ms: 49152
     },
     {
@@ -930,7 +930,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\quarter_horse_s_000500.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/quarter_horse_s_000500.bin"',
         ms: 49152
     },
     {
@@ -939,7 +939,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\trucking_rig_s_001395.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/trucking_rig_s_001395.bin"',
         ms: 49152
     },
     {
@@ -948,7 +948,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_bomber_s_001550.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_bomber_s_001550.bin"',
         ms: 49152
     },
     {
@@ -957,7 +957,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\leopard_frog_s_001170.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/leopard_frog_s_001170.bin"',
         ms: 49152
     },
     {
@@ -966,7 +966,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\coupe_s_000456.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/coupe_s_000456.bin"',
         ms: 49152
     },
     {
@@ -975,7 +975,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pipit_s_001762.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pipit_s_001762.bin"',
         ms: 49152
     },
     {
@@ -984,7 +984,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bullfrog_s_000196.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bullfrog_s_000196.bin"',
         ms: 49152
     },
     {
@@ -993,7 +993,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\twinjet_s_000024.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/twinjet_s_000024.bin"',
         ms: 49152
     },
     {
@@ -1002,7 +1002,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\camion_s_001422.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/camion_s_001422.bin"',
         ms: 49152
     },
     {
@@ -1011,7 +1011,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fire_engine_s_001608.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fire_engine_s_001608.bin"',
         ms: 49152
     },
     {
@@ -1020,7 +1020,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fire_truck_s_000774.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fire_truck_s_000774.bin"',
         ms: 49152
     },
     {
@@ -1029,7 +1029,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\mutt_s_000099.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/mutt_s_000099.bin"',
         ms: 49152
     },
     {
@@ -1038,7 +1038,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\nandu_s_001738.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/nandu_s_001738.bin"',
         ms: 49152
     },
     {
@@ -1047,7 +1047,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\police_cruiser_s_000113.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/police_cruiser_s_000113.bin"',
         ms: 49152
     },
     {
@@ -1056,7 +1056,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\monoplane_s_000012.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/monoplane_s_000012.bin"',
         ms: 49152
     },
     {
@@ -1065,7 +1065,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bufo_viridis_s_000198.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bufo_viridis_s_000198.bin"',
         ms: 49152
     },
     {
@@ -1074,7 +1074,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\sea_boat_s_001161.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/sea_boat_s_001161.bin"',
         ms: 49152
     },
     {
@@ -1083,7 +1083,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fighter_aircraft_s_000386.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fighter_aircraft_s_000386.bin"',
         ms: 49152
     },
     {
@@ -1092,7 +1092,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\mule_deer_s_000451.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/mule_deer_s_000451.bin"',
         ms: 49152
     },
     {
@@ -1101,7 +1101,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\deer_s_001711.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/deer_s_001711.bin"',
         ms: 49152
     },
     {
@@ -1110,7 +1110,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_fighter_s_000584.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_fighter_s_000584.bin"',
         ms: 49152
     },
     {
@@ -1119,7 +1119,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\songbird_s_001048.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/songbird_s_001048.bin"',
         ms: 49152
     },
     {
@@ -1128,7 +1128,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fighter_aircraft_s_001370.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fighter_aircraft_s_001370.bin"',
         ms: 49152
     },
     {
@@ -1137,7 +1137,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\laundry_truck_s_000491.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/laundry_truck_s_000491.bin"',
         ms: 49152
     },
     {
@@ -1146,7 +1146,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\leopard_frog_s_000216.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/leopard_frog_s_000216.bin"',
         ms: 49152
     },
     {
@@ -1155,7 +1155,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pickerel_frog_s_000341.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pickerel_frog_s_000341.bin"',
         ms: 49152
     },
     {
@@ -1164,7 +1164,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_fighter_s_000883.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_fighter_s_000883.bin"',
         ms: 49152
     },
     {
@@ -1173,7 +1173,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\dumper_s_000309.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/dumper_s_000309.bin"',
         ms: 49152
     },
     {
@@ -1182,7 +1182,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\biplane_s_001810.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/biplane_s_001810.bin"',
         ms: 49152
     },
     {
@@ -1191,7 +1191,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tabby_cat_s_002739.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tabby_cat_s_002739.bin"',
         ms: 49152
     },
     {
@@ -1200,7 +1200,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cervus_elaphus_s_000038.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cervus_elaphus_s_000038.bin"',
         ms: 49152
     },
     {
@@ -1209,7 +1209,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\moving_van_s_001436.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/moving_van_s_001436.bin"',
         ms: 49152
     },
     {
@@ -1218,7 +1218,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\saddle_horse_s_002074.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/saddle_horse_s_002074.bin"',
         ms: 49152
     },
     {
@@ -1227,7 +1227,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\sea_boat_s_002032.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/sea_boat_s_002032.bin"',
         ms: 49152
     },
     {
@@ -1236,7 +1236,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\camion_s_000130.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/camion_s_000130.bin"',
         ms: 49152
     },
     {
@@ -1245,7 +1245,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bookmobile_s_001012.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bookmobile_s_001012.bin"',
         ms: 49152
     },
     {
@@ -1254,7 +1254,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\wagon_s_001640.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/wagon_s_001640.bin"',
         ms: 49152
     },
     {
@@ -1263,7 +1263,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fighter_s_000532.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fighter_s_000532.bin"',
         ms: 49152
     },
     {
@@ -1272,7 +1272,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_bomber_s_001916.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_bomber_s_001916.bin"',
         ms: 49152
     },
     {
@@ -1281,7 +1281,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\toad_s_000408.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/toad_s_000408.bin"',
         ms: 49152
     },
     {
@@ -1290,7 +1290,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\barge_s_000524.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/barge_s_000524.bin"',
         ms: 49152
     },
     {
@@ -1299,7 +1299,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\lippizan_s_000005.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/lippizan_s_000005.bin"',
         ms: 49152
     },
     {
@@ -1308,7 +1308,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fighter_aircraft_s_001361.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fighter_aircraft_s_001361.bin"',
         ms: 49152
     },
     {
@@ -1317,7 +1317,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\shooting_brake_s_000841.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/shooting_brake_s_000841.bin"',
         ms: 49152
     },
     {
@@ -1326,7 +1326,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\lapdog_s_000619.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/lapdog_s_000619.bin"',
         ms: 49152
     },
     {
@@ -1335,7 +1335,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tomcat_s_001536.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tomcat_s_001536.bin"',
         ms: 49152
     },
     {
@@ -1344,7 +1344,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\moose_s_001207.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/moose_s_001207.bin"',
         ms: 49152
     },
     {
@@ -1353,7 +1353,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\lipizzan_s_000018.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/lipizzan_s_000018.bin"',
         ms: 49152
     },
     {
@@ -1362,7 +1362,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pekinese_s_002105.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pekinese_s_002105.bin"',
         ms: 49152
     },
     {
@@ -1371,7 +1371,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\american_elk_s_000126.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/american_elk_s_000126.bin"',
         ms: 49152
     },
     {
@@ -1380,7 +1380,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bufo_bufo_s_000866.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bufo_bufo_s_000866.bin"',
         ms: 49152
     },
     {
@@ -1389,7 +1389,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cow_pony_s_001233.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cow_pony_s_001233.bin"',
         ms: 49152
     },
     {
@@ -1398,7 +1398,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\puppy_s_001496.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/puppy_s_001496.bin"',
         ms: 49152
     },
     {
@@ -1407,7 +1407,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\car_s_000026.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/car_s_000026.bin"',
         ms: 49152
     },
     {
@@ -1416,7 +1416,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\stealth_fighter_s_000138.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/stealth_fighter_s_000138.bin"',
         ms: 49152
     },
     {
@@ -1425,7 +1425,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\cat_s_000839.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/cat_s_000839.bin"',
         ms: 49152
     },
     {
@@ -1434,7 +1434,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\lorry_s_000755.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/lorry_s_000755.bin"',
         ms: 49152
     },
     {
@@ -1443,7 +1443,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\canis_familiaris_s_000642.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/canis_familiaris_s_000642.bin"',
         ms: 49152
     },
     {
@@ -1452,7 +1452,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pleasure_boat_s_000131.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pleasure_boat_s_000131.bin"',
         ms: 49152
     },
     {
@@ -1461,7 +1461,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tank_ship_s_000912.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tank_ship_s_000912.bin"',
         ms: 49152
     },
     {
@@ -1470,7 +1470,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\rangifer_caribou_s_000175.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/rangifer_caribou_s_000175.bin"',
         ms: 49152
     },
     {
@@ -1479,7 +1479,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\convertible_s_001561.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/convertible_s_001561.bin"',
         ms: 49152
     },
     {
@@ -1488,7 +1488,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\english_toy_spaniel_s_000590.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/english_toy_spaniel_s_000590.bin"',
         ms: 49152
     },
     {
@@ -1497,7 +1497,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\arabian_s_000443.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/arabian_s_000443.bin"',
         ms: 49152
     },
     {
@@ -1506,7 +1506,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\spadefoot_s_000290.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/spadefoot_s_000290.bin"',
         ms: 49152
     },
     {
@@ -1515,7 +1515,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\jetliner_s_000162.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/jetliner_s_000162.bin"',
         ms: 49152
     },
     {
@@ -1524,7 +1524,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\bufo_viridis_s_001212.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/bufo_viridis_s_001212.bin"',
         ms: 49152
     },
     {
@@ -1533,7 +1533,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\ship_s_001663.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/ship_s_001663.bin"',
         ms: 49152
     },
     {
@@ -1542,7 +1542,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\saddle_horse_s_001679.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/saddle_horse_s_001679.bin"',
         ms: 49152
     },
     {
@@ -1551,7 +1551,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\true_cat_s_000915.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/true_cat_s_000915.bin"',
         ms: 49152
     },
     {
@@ -1560,7 +1560,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\domestic_cat_s_000055.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/domestic_cat_s_000055.bin"',
         ms: 49152
     },
     {
@@ -1569,7 +1569,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tabby_s_001166.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tabby_s_001166.bin"',
         ms: 49152
     },
     {
@@ -1578,7 +1578,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\felis_catus_s_000018.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/felis_catus_s_000018.bin"',
         ms: 49152
     },
     {
@@ -1587,7 +1587,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\shooting_brake_s_000220.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/shooting_brake_s_000220.bin"',
         ms: 49152
     },
     {
@@ -1596,7 +1596,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\speedboat_s_001945.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/speedboat_s_001945.bin"',
         ms: 49152
     },
     {
@@ -1605,7 +1605,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\toad_s_001102.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/toad_s_001102.bin"',
         ms: 49152
     },
     {
@@ -1614,7 +1614,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\wagtail_s_001938.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/wagtail_s_001938.bin"',
         ms: 49152
     },
     {
@@ -1623,7 +1623,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\emu_s_000057.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/emu_s_000057.bin"',
         ms: 49152
     },
     {
@@ -1632,7 +1632,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\fallow_deer_s_001050.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/fallow_deer_s_001050.bin"',
         ms: 49152
     },
     {
@@ -1641,7 +1641,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\prunella_modularis_s_000006.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/prunella_modularis_s_000006.bin"',
         ms: 49152
     },
     {
@@ -1650,7 +1650,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\nandu_s_001936.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/nandu_s_001936.bin"',
         ms: 49152
     },
     {
@@ -1659,7 +1659,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\ostrich_s_001177.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/ostrich_s_001177.bin"',
         ms: 49152
     },
     {
@@ -1668,7 +1668,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\felis_domesticus_s_000682.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/felis_domesticus_s_000682.bin"',
         ms: 49152
     },
     {
@@ -1677,7 +1677,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\american_elk_s_000045.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/american_elk_s_000045.bin"',
         ms: 49152
     },
     {
@@ -1686,7 +1686,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\leopard_frog_s_000567.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/leopard_frog_s_000567.bin"',
         ms: 49152
     },
     {
@@ -1695,7 +1695,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\garbage_truck_s_001000.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/garbage_truck_s_001000.bin"',
         ms: 49152
     },
     {
@@ -1704,7 +1704,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\broodmare_s_000497.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/broodmare_s_000497.bin"',
         ms: 49152
     },
     {
@@ -1713,7 +1713,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\guard_boat_s_000976.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/guard_boat_s_000976.bin"',
         ms: 49152
     },
     {
@@ -1722,7 +1722,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\elk_s_000296.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/elk_s_000296.bin"',
         ms: 49152
     },
     {
@@ -1731,7 +1731,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\sparrow_s_000417.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/sparrow_s_000417.bin"',
         ms: 49152
     },
     {
@@ -1740,7 +1740,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\tipper_truck_s_000230.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/tipper_truck_s_000230.bin"',
         ms: 49152
     },
     {
@@ -1749,7 +1749,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\mule_deer_s_000821.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/mule_deer_s_000821.bin"',
         ms: 49152
     },
     {
@@ -1758,7 +1758,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\wagon_s_001295.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/wagon_s_001295.bin"',
         ms: 49152
     },
     {
@@ -1767,7 +1767,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\pilot_boat_s_000430.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/pilot_boat_s_000430.bin"',
         ms: 49152
     },
     {
@@ -1776,7 +1776,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\nandu_s_001279.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/nandu_s_001279.bin"',
         ms: 49152
     },
     {
@@ -1785,7 +1785,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\coupe_s_000299.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/coupe_s_000299.bin"',
         ms: 49152
     },
     {
@@ -1794,7 +1794,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\gunboat_s_000431.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/gunboat_s_000431.bin"',
         ms: 49152
     },
     {
@@ -1803,7 +1803,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\alytes_obstetricans_s_000125.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/alytes_obstetricans_s_000125.bin"',
         ms: 49152
     },
     {
@@ -1812,7 +1812,7 @@
         ack: /dut.?: m-ready/
     },
     {
-        cmd: 'bload dut "C:\\Users\\bhawks\\eembc\\runner\\benchmarks\\ulp-mlperf\\datasets\\ic01\\truck_s_001161.bin"',
+        cmd: 'bload dut "/root/eembc/runner/benchmarks/ulp-mlperf/datasets/ic01/truck_s_001161.bin"',
         ms: 49152
     },
     {
